@@ -1762,3 +1762,28 @@ h1, h2, h3, h4, h5,
 
 .subcription-form button {
   border-radius: 0px 4px 4px 0px !important; }
+.logo-img {
+  max-height: 50px; /* Logo yüksekliği */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin-right: 10px; /* Logolar arası boşluk */
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    max-height: 35px; /* Mobilde biraz daha küçük */
+    margin-right: 6px;
+  }
+}
+
+.site-logo a {
+  text-decoration: none;
+}
+
+.site-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
