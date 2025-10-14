@@ -1788,6 +1788,60 @@ h1, h2, h3, h4, h5,
   align-items: center;
 }
 
+/* İletişim sayfası özel stiller */
+.contact-section .card {
+  border: none;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border-radius: 16px;
+  background: #fff;
+}
+.contact-section .card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #007bff;
+}
+.contact-section .list-unstyled li {
+  font-size: 1.05rem;
+  color: #333;
+}
+.contact-section form {
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  background: #fff;
+}
+.contact-section form input,
+.contact-section form textarea {
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.contact-section form input:focus,
+.contact-section form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+.contact-section form .btn-primary {
+  background: linear-gradient(90deg,#007bff 0%,#00c6ff 100%);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 10px 0;
+  transition: background 0.2s;
+}
+.contact-section form .btn-primary:hover {
+  background: linear-gradient(90deg,#0056b3 0%,#007bff 100%);
+}
+.contact-section iframe {
+  border-radius: 16px;
+}
+@media (max-width: 991.98px) {
+  .contact-section .card,
+  .contact-section form {
+    margin-bottom: 24px;
+  }
+}
+
 /* Giriş kısmı (site-blocks-cover) iki sütunlu modern görünüm */
 .site-blocks-cover-row {
   min-height: 520px;
