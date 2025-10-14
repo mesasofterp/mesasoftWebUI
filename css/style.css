@@ -1787,3 +1787,71 @@ h1, h2, h3, h4, h5,
   justify-content: center;
   align-items: center;
 }
+
+/* Giriş kısmı (site-blocks-cover) iki sütunlu modern görünüm */
+.site-blocks-cover-row {
+  min-height: 520px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.site-blocks-cover .col-lg-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.site-blocks-cover h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.site-blocks-cover-form {
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.site-blocks-cover-form input,
+.site-blocks-cover-form textarea {
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  font-size: 1rem;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+}
+
+.site-blocks-cover-form input:focus,
+.site-blocks-cover-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.site-blocks-cover-form .btn-primary {
+  background: linear-gradient(90deg,#007bff 0%,#00c6ff 100%);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 10px 0;
+  transition: background 0.2s;
+}
+.site-blocks-cover-form .btn-primary:hover {
+  background: linear-gradient(90deg,#0056b3 0%,#007bff 100%);
+}
+
+@media (max-width: 991.98px) {
+  .site-blocks-cover-row {
+    flex-direction: column;
+    min-height: 0;
+  }
+  .site-blocks-cover .col-lg-6 {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  .site-blocks-cover-form {
+    max-width: 100%;
+  }
+}
