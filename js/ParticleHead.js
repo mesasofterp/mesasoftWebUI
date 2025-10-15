@@ -74,46 +74,59 @@ Background.headparticle = function() {
    Background.renderer.setClearColor(0x000000, 0);
 
    $('.particlehead').append(Background.renderer.domElement);
-   $('.particlehead').on('mousemove', onDocumentMouseMove);
+   $('.particlehead').on('mousemove', onDocumentMouseMove); // Fare dinleyicisini ekle
    site.window.on('resize', onWindowResize);
 
    function onWindowResize() {
       windowHalfX = site.Width / 2;
       windowHalfY = site.Height / 2;
-      //console.log(windowHalfX);
-
       Background.camera.aspect = site.Width / site.Height;
       Background.camera.updateProjectionMatrix();
-
       Background.renderer.setSize( site.Width, site.Height );
    }
 
+   // Fare hareketini yakalayan fonksiyonu geri ekle
    function onDocumentMouseMove( event ) {
       mouseX = ( event.clientX - windowHalfX ) / 2;
       mouseY = ( event.clientY - windowHalfY ) / 2;
    }
 
-   Background.animate = function() { 
+   var introComplete = false;
+   function introAnimation() {
+      if ($('.site-blocks-cover-form').length) {
+        TweenMax.to(Background.camera.position, 2.5, { y: 80, ease: Power2.easeInOut });
+        var scrollTarget = $('.site-blocks-cover-form').offset().top - 150;
+        $('html, body').animate({
+            scrollTop: scrollTarget
+        }, 2500, 'easeInOutExpo', function() {
+            introComplete = true;
+        });
+      } else {
+        introComplete = true;
+      }
+   }
 
+   Background.animate = function() { 
       Background.ticker = TweenMax.ticker;
       Background.ticker.addEventListener("tick", Background.animate);
-
       render();
    }
 
    function render() {
-      Background.camera.position.x += ( (mouseX * .5) - Background.camera.position.x ) * .05;
-      Background.camera.position.y += ( -(mouseY * .5) - Background.camera.position.y ) * .05;
+      // Sadece giriş animasyonu bittikten sonra fareyi takip et
+      if (introComplete) {
+        Background.camera.position.x += ( (mouseX * .5) - Background.camera.position.x ) * .05;
+        Background.camera.position.y += ( -(mouseY * .5) - Background.camera.position.y ) * .05;
+      }
 
       Background.camera.lookAt( Background.scene.position );
-
       Background.renderer.render( Background.scene, Background.camera );
    }
 
    render();
-
    Background.animate();
-};
+   introAnimation(); 
 
+}; 
 
 Background.headparticle();
