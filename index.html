@@ -420,38 +420,42 @@
         </div>
       </section>
 
-      <div class="site-section" id="about-section">
-        <div class="container">
-          <div class="row mb-5">
-            <div class="col-md-5 ml-auto mb-5 order-md-2" data-jarallax-element="50">
-              <img src="images/about_1.jpg" alt="Mesa Soft Ekibi" class="img-fluid rounded">
-            </div>
-            <div class="col-md-6 order-md-1" data-jarallax-element="-50">
-              <div class="row">
-                <div class="col-12">
-                  <div class="text-left pb-1">
-                    <h2 class="site-section-heading">Hakkımızda</h2>
-                  </div>
+        <!-- Hakkımızda Bölümü (Modern Lacivert Şerit) -->
+        <div class="site-section" id="about-section" style="padding:0;">
+          <div class="about-bg-strip">
+            <div class="container py-5">
+              <div class="row mb-5 align-items-center">
+                <div class="col-md-5 ml-auto mb-5 order-md-2" data-jarallax-element="50">
+                  <img src="images/about_1.jpg" alt="Mesa Soft Ekibi" class="img-fluid rounded shadow-lg">
                 </div>
-                <div class="col-12 mb-4">
-                  <p class="lead">Mesa Soft, işletmelerin dijital dönüşüm yolculuğunda güvenilir bir iş ortağı olmak amacıyla kurulmuş, AKINSOFT Yetkili Çözüm Ortağıdır.</p>
-                  <p>Tecrübeli ve uzman kadromuzla, KOBİ'lerden büyük ölçekli işletmelere kadar her sektörden firmaya, AKINSOFT'un güçlü ERP yazılımlarını sunarak verimliliklerini artırmayı hedefliyoruz. Müşteri memnuniyetini merkeze alan yaklaşımımızla, ihtiyaçlarınıza özel çözümler üretiyor ve 7/24 destek sağlıyoruz.</p>
-                </div>
-                <div class="col-md-12 mb-md-5 mb-0 col-lg-6">
-                  <div class="unit-4">
-                    <div class="unit-4-icon mr-4 mb-3"><span class="text-primary icon-star"></span></div>
-                    <div>
-                      <h3>Uzman Kadro</h3>
-                      <p>Alanında sertifikalı ve tecrübeli danışmanlarımızla projenizin her aşamasında yanınızdayız.</p>
+                <div class="col-md-6 order-md-1" data-jarallax-element="-50">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="text-left pb-1">
+                        <h2 class="site-section-heading about-title">Hakkımızda</h2>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div class="col-md-12 mb-md-5 mb-0 col-lg-6">
-                  <div class="unit-4">
-                    <div class="unit-4-icon mr-4 mb-3"><span class="text-primary icon-handshake-o"></span></div>
-                    <div>
-                      <h3>Müşteri Odaklılık</h3>
-                      <p>Sadece yazılım satmıyor, işletmenizin başarısı için sizinle birlikte çalışan bir çözüm ortağı oluyoruz.</p>
+                    <div class="col-12 mb-4">
+                      <p class="lead about-lead">Mesa Soft, işletmelerin dijital dönüşüm yolculuğunda güvenilir bir iş ortağı olmak amacıyla kurulmuş, AKINSOFT Yetkili Çözüm Ortağıdır.</p>
+                      <p class="about-desc">Tecrübeli ve uzman kadromuzla, KOBİ'lerden büyük ölçekli işletmelere kadar her sektörden firmaya, AKINSOFT'un güçlü ERP yazılımlarını sunarak verimliliklerini artırmayı hedefliyoruz. Müşteri memnuniyetini merkeze alan yaklaşımımızla, ihtiyaçlarınıza özel çözümler üretiyor ve 7/24 destek sağlıyoruz.</p>
+                    </div>
+                    <div class="col-md-12 mb-md-5 mb-0 col-lg-6">
+                      <div class="unit-4 about-unit">
+                        <div class="unit-4-icon mr-4 mb-3"><span class="text-primary icon-star"></span></div>
+                        <div>
+                          <h3 class="about-feature-title">Uzman Kadro</h3>
+                          <p class="about-feature-desc">Alanında sertifikalı ve tecrübeli danışmanlarımızla projenizin her aşamasında yanınızdayız.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 mb-md-5 mb-0 col-lg-6">
+                      <div class="unit-4 about-unit">
+                        <div class="unit-4-icon mr-4 mb-3"><span class="text-primary icon-handshake-o"></span></div>
+                        <div>
+                          <h3 class="about-feature-title">Müşteri Odaklılık</h3>
+                          <p class="about-feature-desc">Sadece yazılım satmıyor, işletmenizin başarısı için sizinle birlikte çalışan bir çözüm ortağı oluyoruz.</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -459,7 +463,6 @@
             </div>
           </div>
         </div>
-      </div>
 
       <section class="site-section" id="work-section">
         <div class="container">
@@ -596,6 +599,69 @@
           </div>
         </div>
       </footer>
+        <!-- Hakkımızda Şerit Tasarım CSS -->
+        <style>
+          .about-bg-strip {
+            width: 100vw;
+            background: #0a2342;
+            color: #fff;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            box-shadow: 0 4px 24px rgba(10,35,66,0.08);
+          }
+          .about-title {
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+          }
+          .about-lead {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #e0e7ef;
+            margin-bottom: 1rem;
+          }
+          .about-desc {
+            font-size: 1.05rem;
+            color: #cfd8e3;
+            margin-bottom: 2rem;
+          }
+          .about-unit {
+            background: rgba(255,255,255,0.06);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(10,35,66,0.08);
+            display: flex;
+            align-items: center;
+          }
+          .about-feature-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.5rem;
+          }
+          .about-feature-desc {
+            font-size: 1rem;
+            color: #e0e7ef;
+            margin-bottom: 0;
+          }
+          @media (max-width: 991px) {
+            .about-bg-strip {
+              background: #0a2342;
+              margin-left: 0;
+              margin-right: 0;
+              left: 0;
+              right: 0;
+            }
+          }
+        </style>
 
     </div> <!-- .site-wrap -->
 
