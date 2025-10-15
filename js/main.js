@@ -256,4 +256,51 @@ jQuery(document).ready(function($) {
 	};
 	siteScroll();
 
+	// Mobile tap-to-flip for service cards
+	var bindFlipCards = function() {
+		$('.flip-card').each(function(){
+			var $card = $(this);
+			$card.off('click.flip').on('click.flip', function(e){
+				// Prevent following links immediately on tap; allow second tap to follow
+				if (!$(e.target).is('a')) {
+					e.preventDefault();
+				}
+				$card.toggleClass('is-flipped');
+			});
+		});
+		// Close when tapping outside on mobile
+		$(document).off('click.flipOutside').on('click.flipOutside', function(e){
+			if (!$(e.target).closest('.flip-card').length) {
+				$('.flip-card.is-flipped').removeClass('is-flipped');
+			}
+		});
+	};
+	bindFlipCards();
+
+	// Products: tap/click & keyboard flip accessibility
+	var bindProductFlips = function() {
+		$('.product-flip').each(function(){
+			var $card = $(this);
+			$card.off('click.prod').on('click.prod', function(e){
+				if (!$(e.target).is('a')) { e.preventDefault(); }
+				$card.toggleClass('is-flipped');
+				$card.attr('aria-pressed', $card.hasClass('is-flipped') ? 'true' : 'false');
+			});
+			$card.off('keydown.prod').on('keydown.prod', function(e){
+				// Enter or Space toggles flip for keyboard users
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					$card.toggleClass('is-flipped');
+					$card.attr('aria-pressed', $card.hasClass('is-flipped') ? 'true' : 'false');
+				}
+			});
+		});
+		$(document).off('click.prodOutside').on('click.prodOutside', function(e){
+			if (!$(e.target).closest('.product-flip').length) {
+				$('.product-flip.is-flipped').removeClass('is-flipped').attr('aria-pressed','false');
+			}
+		});
+	};
+	bindProductFlips();
+
 });

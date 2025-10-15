@@ -153,6 +153,21 @@ h1, h2, h3, h4, h5,
   @media (min-width: 768px) {
     .site-section-heading {
       font-size: 30px; } }
+  #services-section .site-section-heading {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+    color: #21325E;
+  }
+  #services-section .site-section-heading:after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 4px;
+    margin: 14px auto 0;
+    background: linear-gradient(90deg,#1f68d6 0%,#00b8ff 100%);
+    border-radius: 999px;
+  }
 
 .border-top {
   border-top: 1px solid #edf0f5 !important; }
@@ -1300,6 +1315,143 @@ h1, h2, h3, h4, h5,
 
 .unit-4 h3 {
   font-size: 18px; }
+
+/* Flip cards for services */
+.flip-card {
+  perspective: 1200px;
+}
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform .7s cubic-bezier(.2,.8,.2,1);
+}
+.flip-card:hover .flip-inner,
+.flip-card:focus-within .flip-inner {
+  transform: rotateY(180deg);
+}
+.flip-card.is-flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+.flip-front,
+.flip-back {
+  position: relative;
+  min-height: 220px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flip-front {
+  padding: 24px;
+}
+.flip-back {
+  position: absolute;
+  inset: 0;
+  padding: 24px;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+}
+.flip-back .more-link {
+  text-decoration: underline;
+}
+
+/* Products flip cards with CSS variables for consistency */
+:root {
+  --card-radius: 12px;
+  --card-pad: 24px;
+  --card-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  --flip-duration: .7s;
+  --flip-ease: cubic-bezier(.2,.8,.2,1);
+  --badge-size: 64px;
+  --badge-font: 28px;
+  --badge-1: #e3f2fd;
+  --badge-2: #fff3e0;
+  --badge-3: #e8f5e9;
+  --badge-4: #f3e5f5;
+  --badge-5: #ede7f6;
+  --badge-6: #ffe0e0;
+}
+
+#products-section .site-section-heading {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.product-flip {
+  perspective: 1200px;
+  outline: none;
+}
+.product-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform var(--flip-duration) var(--flip-ease);
+}
+.product-front,
+.product-back {
+  position: relative;
+  min-height: 260px;
+  border-radius: var(--card-radius);
+  background: #fff;
+  box-shadow: var(--card-shadow);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  padding: var(--card-pad);
+}
+.product-front {
+  display: flex;
+  flex-direction: column;
+}
+.product-back {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+}
+.product-flip:hover .product-inner,
+.product-flip:focus .product-inner,
+.product-flip.is-flipped .product-inner {
+  transform: rotateY(180deg);
+}
+.product-badge {
+  width: var(--badge-size);
+  height: var(--badge-size);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--badge-font);
+  margin-bottom: 16px;
+}
+.badge-1 { background: var(--badge-1); }
+.badge-2 { background: var(--badge-2); }
+.badge-3 { background: var(--badge-3); }
+.badge-4 { background: var(--badge-4); }
+.badge-5 { background: var(--badge-5); }
+.badge-6 { background: var(--badge-6); }
+
+.product-front h3,
+.product-back h3 {
+  font-weight: 800;
+  font-size: 20px;
+  color: #20315c;
+  margin-bottom: 10px;
+}
+.product-front p {
+  color: #55627f;
+}
+.product-back p {
+  color: #4a5672;
+  margin-bottom: 12px;
+}
+.product-more {
+  font-size: 14px;
+  text-decoration: underline;
+}
 
 .h-entry img {
   margin-bottom: 30px; }
