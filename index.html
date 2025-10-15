@@ -129,6 +129,37 @@
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens": "09:00","closes": "18:00"
     }}
   </script>
+  <style>
+    .video-background-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .video-background-container iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100vw;
+      height: 56.25vw; /* 16:9 aspect ratio */
+      min-width: 177.77vh; /* 16:9 aspect ratio */
+      min-height: 100vh;
+      transform: translate(-50%, -50%);
+    }
+    .text-container-video-bg {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .text-container-video-bg h1,
+    .text-container-video-bg p,
+    .text-container-video-bg .typed-words {
+      color: #fff !important;
+    }
+  </style>
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
@@ -182,10 +213,13 @@
           </div>
         </div>
       </div>  
-      <div class="site-blocks-cover">
-        <div class="container">
+      <div class="site-blocks-cover" style="position: relative; overflow: hidden;">
+        <div class="video-background-container">
+           <iframe src="https://www.youtube.com/embed/oUqTi9e-AQ0?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&modestbranding=1&playlist=oUqTi9e-AQ0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="container" style="position: relative; z-index: 2;">
           <div class="row align-items-center justify-content-center site-blocks-cover-row">
-            <div class="col-lg-6 col-md-12 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="400">
+            <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 text-container-video-bg" data-aos="fade-right" data-aos-delay="400">
               <h1 class="text-left">AKINSOFT ile İşletmenizi Geleceğe Taşıyan <span class="typed-words"></span></h1>
               <p class="lead mb-5 text-left">AKINSOFT'un güçlü ve esnek ERP çözümleri ile dijital dönüşümde bir adım öne geçin. Mesa Soft olarak yanınızdayız.</p>
               <div class="text-left"><a href="#contact-section" class="btn btn-primary btn-md">Demo Talep Et</a></div>
