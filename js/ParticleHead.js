@@ -48,7 +48,6 @@ Background.headparticle = function() {
    loader.load( 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/40480/head.obj', function ( object ) {
 
       object.traverse( function ( child ) {
-space.mp4
          if ( child instanceof THREE.Mesh ) {
 
             // child.material.map = texture;
