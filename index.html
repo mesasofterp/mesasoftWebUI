@@ -364,23 +364,24 @@
               <div class="text-left"><a href="#contact-section" class="btn btn-primary btn-md">Demo Talep Et</a></div>
             </div>
             <div class="col-lg-6 col-md-12" data-aos="fade-left" data-aos-delay="600">
-              <form action="#" class="p-4 bg-white shadow rounded site-blocks-cover-form">
+              <form id="demo-form" class="p-4 bg-white shadow rounded site-blocks-cover-form">
                 <h2 class="h5 mb-2 text-center">Ücretsiz Demo Talebi Oluştur</h2>
+                <div id="form-messages" class="mb-3"></div>
                 <p class="text-center mb-4" style="font-size:1rem;color:#555;">Formu doldurun, 30 gün ücretsiz Akınsoft kalitesini deneyimleyin.</p>
                 <div class="form-group">
-                  <input type="text" id="fullname" class="form-control mb-2" placeholder="İsim Soyisim">
+                  <input type="text" id="fullname" name="fullname" class="form-control mb-2" placeholder="İsim Soyisim" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" id="company" class="form-control mb-2" placeholder="Ticari Ünvan">
+                  <input type="text" id="company" name="company" class="form-control mb-2" placeholder="Ticari Ünvan">
                 </div>
                 <div class="form-group">
-                  <input type="email" id="email" class="form-control mb-2" placeholder="E-Mail">
+                  <input type="email" id="email" name="email" class="form-control mb-2" placeholder="E-Mail" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" id="phone" class="form-control mb-2" placeholder="Telefon">
+                  <input type="text" id="phone" name="phone" class="form-control mb-2" placeholder="Telefon">
                 </div>
                 <div class="form-group">
-                  <textarea name="message" id="message" cols="30" rows="4" class="form-control mb-3" placeholder="Mesajınız"></textarea>
+                  <textarea name="message" id="message" cols="30" rows="4" class="form-control mb-3" placeholder="Mesajınız" required></textarea>
                 </div>
                 <div class="form-group text-center">
                   <input type="submit" value="Mesajı Gönder" class="btn btn-primary btn-block text-white">
@@ -893,5 +894,41 @@
       });
     </script>
     <script src="js/main.js"></script>
+    <script>
+      document.getElementById('demo-form').addEventListener('submit', function(event) {
+        // Formun normal gönderimini engelle
+        event.preventDefault();
+
+        var form = this;
+        var formData = new FormData(form);
+        var formMessages = document.getElementById('form-messages');
+
+        formMessages.innerHTML = '<div class="alert alert-info">Mesajınız gönderiliyor...</div>';
+
+        // Node.js sunucusuna verileri gönder
+        fetch('http://193.111.78.38:1905/api/contact', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+          }
+          return response.json();
+        })
+        .then(data => {
+          if (data.success) {
+            formMessages.innerHTML = '<div class="alert alert-success">' + data.message + '</div>';
+            form.reset(); // Formu temizle
+          } else {
+            formMessages.innerHTML = '<div class="alert alert-danger">' + data.message + '</div>';
+          }
+        })
+        .catch(error => {
+          console.error('Hata:', error);
+          formMessages.innerHTML = '<div class="alert alert-danger">Bir hata oluştu. Lütfen daha sonra tekrar deneyin.</div>';
+        });
+      });
+    </script>
   </body>
   </html>
