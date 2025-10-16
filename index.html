@@ -100,10 +100,82 @@
     body {
       padding-top: 0;
     }
-    .site-navbar .main-menu .nav-link:hover,
-    .site-navbar .main-menu .nav-link:focus {
-      color: #649DD1 !important;
-    }
+     .site-navbar .main-menu .nav-link:hover,
+     .site-navbar .main-menu .nav-link:focus {
+       color: #649DD1 !important;
+     }
+     
+     /* Dropdown Menü Stilleri */
+     .menu-item-has-children {
+       position: relative;
+     }
+     
+     .menu-item-has-children      .sub-menu {
+       position: absolute;
+       top: 100%;
+       left: 0;
+       min-width: 250px;
+       background: #fff;
+       border-radius: 8px;
+       box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+       opacity: 0;
+       visibility: hidden;
+       transform: translateY(-10px);
+       transition: all 0.3s ease;
+       z-index: 1000;
+       padding: 12px 0;
+       margin-top: 8px;
+       text-align: left;
+     }
+     
+     .menu-item-has-children:hover .sub-menu {
+       opacity: 1;
+       visibility: visible;
+       transform: translateY(0);
+     }
+     
+     .sub-menu li {
+       list-style: none;
+       margin: 0;
+       padding: 0;
+       text-align: left;
+     }
+     
+     .sub-menu a {
+       display: block;
+       padding: 10px 20px;
+       color: #333;
+       text-decoration: none;
+       font-size: 14px;
+       font-weight: 500;
+       transition: all 0.2s ease;
+       border-left: 3px solid transparent;
+       text-align: left;
+     }
+     
+     .sub-menu a:hover {
+       background-color: #f8f9fa;
+       color: #649DD1;
+       border-left-color: #649DD1;
+       padding-left: 25px;
+     }
+     
+     /* Ana menü linki için ok işareti */
+     .menu-item-has-children > a::after {
+       content: "▼";
+       font-size: 10px;
+       margin-left: 5px;
+       transition: transform 0.3s ease;
+     }
+     
+     .menu-item-has-children:hover > a::after {
+       transform: rotate(180deg);
+     }
+     
+     /* Online İşlemler için özel stil */
+     .menu-item-has-children > a[href="javascript:void(0)"] {
+       cursor: pointer;
+     }
     /* Ürünlerimiz kart arka yüzü için özel stil */
     .product-back {
       background: #0a2342 !important;
@@ -223,15 +295,39 @@
       <!-- Menü Alanı -->
       <div class="col-12 col-md-9 d-none d-xl-block">
         <nav class="site-navigation position-relative text-right" role="navigation">
-          <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-            <li><a href="#home-section" class="nav-link">Ana Sayfa</a></li>
-            <!-- <li><a href="#services-section" class="nav-link">Hizmetlerimiz</a></li> -->
-            <li><a href="#products-section" class="nav-link">Ürünlerimiz</a></li>
-                        <li><a href="#work-section" class="nav-link">Sektörel Çözümler</a></li>
-            <li><a href="about.html" class="nav-link">Hakkımızda</a></li>
-            <li><a href="#blog-section" class="nav-link">Blog</a></li>
-            <li><a href="contact.html" class="nav-link">İletişim</a></li>
-          </ul>
+           <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+             <li><a href="#home-section" class="nav-link">Ana Sayfa</a></li>
+             <!-- <li><a href="#services-section" class="nav-link">Hizmetlerimiz</a></li> -->
+             <li class="menu-item menu-item-has-children">
+               <a href="#products-section" class="nav-link">Ürünlerimiz</a>
+               <ul class="sub-menu">
+                 <li><a href="wolvox-erp.html">Ön Muhasebe – ERP</a></li>
+                 <li><a href="restoran-yonetimi.html">Restoran Yönetimi</a></li>
+                 <li><a href="#work-section">E-Dönüşüm</a></li>
+                 <li><a href="#">E-Ticaret</a></li>
+                 <li><a href="hizli-satis.html">Hızlı Satış</a></li>
+                 <li><a href="#">Otel Yönetimi</a></li>
+                 <li><a href="genel-muhasebe.html">Genel Muhasebe</a></li>
+                 <li><a href="#">Servis Yönetimi</a></li>
+                 <li><a href="#">CafePlus</a></li>
+               </ul>
+             </li>
+             <li class="menu-item menu-item-has-children">
+               <a href="javascript:void(0)" class="nav-link">Online İşlemler</a>
+               <ul class="sub-menu">
+                 <li><a href="https://musteri.akinsoft.net/tr/login?returnUrl=%2F" target="_blank">Akınsoft Müşteri Girişi</a></li>
+                 <li><a href="https://bayi.akinsoft.net/" target="_blank">Akınsoft Bayi Girişi</a></li>
+                 <li><a href="https://bilgibankasi.akinsoft.net/" target="_blank">Akınsoft Bilgi Bankası</a></li>
+                 <li><a href="https://www.youtube.com/user/AKINSOFTEgitim/" target="_blank">Akınsoft Eğitim Videoları</a></li>
+                 <!-- <li><a href="https://www.istanbulakinsoft.net/indirmeler/" target="_blank">İndirmeler</a></li> -->
+                 <li><a href="fiyatlandirma.html">Fiyatlandırma</a></li>
+               </ul>
+             </li>
+             <li><a href="#work-section" class="nav-link">E-Dönüşüm</a></li>
+             <li><a href="about.html" class="nav-link">Hakkımızda</a></li>
+             <li><a href="#blog-section" class="nav-link">Blog</a></li>
+             <li><a href="contact.html" class="nav-link">İletişim</a></li>
+           </ul>
         </nav>
       </div>
 
@@ -642,22 +738,35 @@
             <div class="col-lg-2 mb-4 mb-lg-0">
               <h2 class="footer-heading mb-3">Hızlı Menü</h2>
               <ul class="list-unstyled pro-footer-menu">
+                <li><a href="#home-section">Ana Sayfa</a></li>
+                <li><a href="#products-section">Ürünlerimiz</a></li>
+                <li><a href="#work-section">E-Dönüşüm</a></li>
                 <li><a href="about.html">Hakkımızda</a></li>
-                <li><a href="#services-section">Çözümlerimiz</a></li>
                 <li><a href="#blog-section">Blog</a></li>
                 <li><a href="contact.html">İletişim</a></li>
               </ul>
             </div>
-            <div class="col-lg-3 mb-4 mb-lg-0">
+            <div class="col-lg-2 mb-4 mb-lg-0">
               <h2 class="footer-heading mb-3">Ürünler</h2>
               <ul class="list-unstyled pro-footer-menu">
-                <li><a href="#">WOLVOX ERP</a></li>
-                <li><a href="#">e-Dönüşüm</a></li>
-                <li><a href="#">Sektörel Çözümler</a></li>
-                <li><a href="#">Tüm Ürünler</a></li>
+                <li><a href="wolvox-erp.html">Ön Muhasebe – ERP</a></li>
+                <li><a href="restoran-yonetimi.html">Restoran Yönetimi</a></li>
+                <li><a href="#work-section">E-Dönüşüm</a></li>
+                <li><a href="hizli-satis.html">Hızlı Satış</a></li>
+                <li><a href="genel-muhasebe.html">Genel Muhasebe</a></li>
               </ul>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-2 mb-4 mb-lg-0">
+              <h2 class="footer-heading mb-3">Online İşlemler</h2>
+              <ul class="list-unstyled pro-footer-menu">
+                <li><a href="https://musteri.akinsoft.net/tr/login?returnUrl=%2F" target="_blank">Müşteri Girişi</a></li>
+                <li><a href="https://bayi.akinsoft.net/" target="_blank">Bayi Girişi</a></li>
+                <li><a href="https://bilgibankasi.akinsoft.net/" target="_blank">Bilgi Bankası</a></li>
+                <li><a href="https://www.youtube.com/user/AKINSOFTEgitim/" target="_blank">Eğitim Videoları</a></li>
+                <li><a href="fiyatlandirma.html">Fiyatlandırma</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2">
               <h2 class="footer-heading mb-3">İletişim</h2>
               <ul class="list-unstyled pro-footer-contact">
                 <li class="mb-2"><span class="icon-map-marker mr-2"></span>Akros İstanbul, Barbaros Hayrettin Paşa, 1995. Sk. No:1-3 Kat:29 Daire No:472, 34522 Esenyurt/İstanbul</li>
