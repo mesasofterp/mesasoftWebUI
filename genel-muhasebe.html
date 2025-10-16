@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="tr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Genel Muhasebe - Akınsoft</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			background: linear-gradient(135deg, #eaf0fa 0%, #f8f9fa 100%);
+			min-height: 100vh;
+		}
+		.site-wrap {
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			background: transparent;
+		}
+		.top-bar {
+			background: linear-gradient(90deg, #21325E 0%, #3A7BD5 100%) !important;
+			color: #fff;
+			box-shadow: 0 2px 12px rgba(33,50,94,0.08);
+			position: fixed;
+			width: 100vw;
+			top: 0;
+			left: 0;
+			z-index: 1030;
+		}
+		.site-navbar {
+			background: #fff !important;
+			box-shadow: 0 2px 16px rgba(33,50,94,0.10);
+			border-radius: 0 0 18px 18px;
+			margin-bottom: 0;
+			padding-bottom: 0;
+			position: fixed;
+			width: 100vw;
+			top: 48px;
+			left: 0;
+			z-index: 1020;
+		}
+		.site-navbar .site-menu .nav-link {
+			color: #21325E !important;
+			font-weight: 500;
+			font-size: 1.08rem;
+			transition: color 0.2s;
+			border-radius: 8px;
+			padding: 8px 18px;
+		}
+		.site-navbar .site-menu .nav-link:hover {
+			background: linear-gradient(90deg, #3A7BD5 0%, #6dd5fa 100%);
+			color: #fff !important;
+		}
+		.site-logo img {
+			filter: drop-shadow(0 2px 8px rgba(33,50,94,0.10));
+			max-height: 48px;
+		}
+		.main-content {
+			margin-top: 140px;
+		}
+		section[style*="min-height"] {
+			background: #fff;
+			border-radius: 18px;
+			box-shadow: 0 4px 32px rgba(33,50,94,0.10);
+			margin: 32px auto;
+			max-width: 1200px;
+			padding: 0;
+			display: flex;
+			flex-direction: row;
+			min-height: 60vh;
+		}
+		@media (max-width: 900px) {
+			section[style*="min-height"] {
+				flex-direction: column;
+				max-width: 98vw;
+				margin: 16px auto;
+				min-height: unset;
+			}
+			.main-content {
+				margin-top: 180px;
+			}
+			.site-navbar {
+				top: 56px;
+			}
+		}
+		.program-list li.animated-btn {
+			background: #fff;
+			margin-bottom: 20px;
+			padding: 20px 28px;
+			border-radius: 10px;
+			font-size: 1.2rem;
+			cursor: pointer;
+			transition: box-shadow 0.2s, transform 0.2s;
+			box-shadow: 0 1px 6px rgba(44,62,80,0.07);
+			text-align: center;
+			position: relative;
+			overflow: hidden;
+		}
+		.program-list li.animated-btn::before {
+			content: "";
+			position: absolute;
+			left: 0; top: 0; bottom: 0;
+			width: 0;
+			background: linear-gradient(90deg, #2980b9 0%, #6dd5fa 100%);
+			transition: width 0.5s;
+			z-index: 0;
+			border-radius: 10px;
+		}
+		.program-list li.animated-btn:hover::before {
+			width: 100%;
+		}
+		.program-list li.animated-btn span {
+			position: relative;
+			z-index: 1;
+			transition: color 0.2s;
+		}
+		.program-list li.animated-btn:hover span {
+			color: #fff;
+		}
+		.program-list li.animated-btn:hover {
+			box-shadow: 0 4px 18px rgba(44,62,80,0.18);
+			transform: scale(1.04);
+		}
+	</style>
+		<style>
+			.animated-btn {
+				background: #fff;
+				margin-bottom: 20px;
+				padding: 20px 28px;
+				border-radius: 10px;
+				font-size: 1.2rem;
+				cursor: pointer;
+				transition: box-shadow 0.2s, transform 0.2s;
+				box-shadow: 0 1px 6px rgba(44,62,80,0.07);
+				text-align: center;
+				position: relative;
+				overflow: hidden;
+			}
+			.animated-btn::before {
+				content: "";
+				position: absolute;
+				left: 0; top: 0; bottom: 0;
+				width: 0;
+				background: linear-gradient(90deg, #2980b9 0%, #6dd5fa 100%);
+				transition: width 0.5s;
+				z-index: 0;
+				border-radius: 10px;
+			}
+			.animated-btn:hover::before {
+				width: 100%;
+			}
+			.animated-btn:hover {
+				box-shadow: 0 4px 18px rgba(44,62,80,0.18);
+				transform: scale(1.04);
+			}
+			.animated-btn span {
+				position: relative;
+				z-index: 1;
+				transition: color 0.2s;
+			}
+			.animated-btn:hover span {
+				color: #fff;
+			}
+		</style>
+</head>
+<body>
+
+			<div class="site-wrap">
+		<div class="top-bar py-2" id="home-section" style="background-color: #21325E !important;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 text-center text-lg-right order-lg-2">
+						<ul class="social-media m-0 p-0">
+							<li><a href="#" class="p-2"><span class="icon-facebook"></span></a></li>
+							<li><a href="https://www.youtube.com/@akinsoft" class="p-2"><span class="icon-youtube"></span></a></li>
+							<li><a href="https://www.instagram.com/mesasoftofficial?igsh=MW1hcDAwc3N2dDU4dw%3D%3D&utm_source=qr " class="p-2"><span class="icon-instagram"></span></a></li>
+							<li><a href="#" class="p-2"><span class="icon-linkedin"></span></a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 text-center text-lg-left order-lg-1">
+						<p class="mb-0 d-inline-flex">
+							<span class="mr-3"><a href="tel:+902129631990" class="d-flex align-items-center"><span class="icon-phone mr-2"></span><span>+90 212 963 19 90</span></a></span>
+							<span class="mr-3"><a href="tel:+905414555837" class="d-flex align-items-center"><span class="icon-phone mr-2"></span><span>+90 541 455 58 37</span></a></span>
+							<span><a href="mailto:info@mesasoft.com.tr" class="d-flex align-items-center"><span class="icon-envelope mr-2"></span><span>info@mesasoft.com.tr</span></a></span>
+						</p>
+					</div>
+				</div>
+			</div> 
+		</div>
+
+				<header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner" style="top: 48px;">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-12 col-xl-3 text-center">
+						<div class="site-logo">
+							<a href="index.html" class="d-flex align-items-center justify-content-center">
+								<img src="images/logo/akinlogo.png" alt="AKINSOFT Logo" class="logo-img">
+								<img src="images/logo/mesalogo.png" alt="Mesa Soft Logo" class="logo-img">
+							</a>
+						</div>
+					</div>
+					<div class="col-12 col-md-9 d-none d-xl-block">
+						<nav class="site-navigation position-relative text-right" role="navigation">
+							<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+								<li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+								<li><a href="index.html#services-section" class="nav-link">Hizmetlerimiz</a></li>
+								<li><a href="index.html#products-section" class="nav-link">Ürünlerimiz</a></li>
+								<li><a href="index.html#about-section" class="nav-link">Hakkımızda</a></li>
+								<li><a href="index.html#work-section" class="nav-link">Sektörel Çözümler</a></li>
+								<li><a href="index.html#blog-section" class="nav-link">Blog</a></li>
+								<li class="active"><a href="contact.html" class="nav-link">İletişim</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
+						<a href="#" class="site-menu-toggle js-menu-toggle text-black">
+							<span class="icon-menu h3"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</header>
+		<div class="main-content">
+		<section style="width:100vw; min-height:60vh; display:flex; justify-content:center; align-items:stretch; background:#fff;">
+	<div style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; background:linear-gradient(135deg,#eaf0fa 0%,#f8f9fa 100%); padding:48px 0; border-radius:18px 0 0 18px;">
+				<iframe src="https://www.youtube.com/embed/2QwQhQwQhQw" title="Genel Muhasebe Tanıtım Videosu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:90%; max-width:700px; height:400px; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.08); background:#000;"></iframe>
+				<div style="width:90%; max-width:700px; margin-top:32px; text-align:left;">
+					<h3 style="color:#21325E; font-size:1.3rem; margin-bottom:12px;">Öne Çıkan Özellikler</h3>
+					<ul style="font-size:1.08rem; color:#333; margin-bottom:24px; padding-left:20px;">
+						<li>Kolay fatura ve fiş işlemleri</li>
+						<li>Gelir-gider ve bütçe takibi</li>
+						<li>Detaylı muhasebe raporları</li>
+						<li>Stok ve cari entegrasyonu</li>
+					</ul>
+					<div style="text-align:center;">
+						<a href="contact.html" style="display:inline-block; background:#21325E; color:#fff; font-weight:bold; padding:14px 32px; border-radius:8px; font-size:1.1rem; text-decoration:none; box-shadow:0 2px 8px rgba(33,50,94,0.08); transition:background 0.2s;">Ücretsiz Demo Talep Et</a>
+					</div>
+				</div>
+			</div>
+			<div style="flex:1; padding:48px 0; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#eaf0fa;">
+				<h2 style="margin-bottom:32px; font-size:1.6rem; color:#21325E; font-weight:bold;">Diğer AKINSOFT Programları</h2>
+				<ul class="program-list" style="list-style:none; padding:0; width:80%; max-width:400px;">
+					<li class="animated-btn"><span>Restoran Yönetimi</span></li>
+					<li class="animated-btn"><span>Hızlı Satış</span></li>
+					<li class="animated-btn"><span>Wolvox ERP</span></li>
+					<li class="animated-btn"><span>Wolvox CRM</span></li>
+				</ul>
+			</div>
+		</section>
+		</div>
+
+		</body>
