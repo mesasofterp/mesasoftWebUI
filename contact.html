@@ -1,3 +1,18 @@
+<style>
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+body {
+  padding-top: 50 !important;
+}
+
+</style>
+
 <!doctype html>
 <html lang="tr">
 <head>
@@ -11,6 +26,7 @@
 </head>
 <body>
   <div class="site-wrap">
+    <div class="fixed-header">
     <div class="top-bar py-2" id="home-section" style="background-color: #21325E !important;">
       <div class="container">
         <div class="row">
@@ -32,47 +48,54 @@
       </div> 
     </div>
 
-    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner" style="top: 0;">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-12 col-xl-3 text-center">
-            <div class="site-logo">
-              <a href="index.html" class="d-flex align-items-center justify-content-center">
-                <img src="images/logo/akinlogo.png" alt="AKINSOFT Logo" class="logo-img">
-                <img src="images/logo/mesalogo.png" alt="Mesa Soft Logo" class="logo-img">
-              </a>
-            </div>
-          </div>
-          <div class="col-12 col-md-9 d-none d-xl-block">
-            <nav class="site-navigation position-relative text-right" role="navigation">
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
-                <li><a href="index.html#services-section" class="nav-link">Hizmetlerimiz</a></li>
-                <li><a href="index.html#products-section" class="nav-link">Ürünlerimiz</a></li>
-                <li><a href="about.html" class="nav-link">Hakkımızda</a></li>
-                <li><a href="index.html#work-section" class="nav-link">Sektörel Çözümler</a></li>
-                <li><a href="index.html#blog-section" class="nav-link">Blog</a></li>
-                <li class="active"><a href="contact.html" class="nav-link">İletişim</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
-            <a href="#" class="site-menu-toggle js-menu-toggle text-black">
-              <span class="icon-menu h3"></span>
-            </a>
-          </div>
+  <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Logo Alanı -->
+      <div class="col-12 col-xl-3 text-center">
+        <div class="site-logo">
+          <a href="index.html" class="d-flex align-items-center justify-content-center">
+            <img src="images/logo/akinlogo.png" alt="AKINSOFT Logo" class="logo-img" style="max-width:120px;width:100%;height:auto;">
+            <img src="images/logo/mesalogo.png" alt="Mesa Soft Logo" class="logo-img" style="max-width:120px;width:100%;height:auto;">
+          </a>
         </div>
       </div>
-    </header>
 
+      <!-- Menü Alanı -->
+      <div class="col-12 col-md-9 d-none d-xl-block">
+        <nav class="site-navigation position-relative text-right" role="navigation">
+          <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+            <li><a href="index.html#home-section" class="nav-link">Ana Sayfa</a></li>
+            <!-- <li><a href="index.html#services-section" class="nav-link">Hizmetlerimiz</a></li> -->
+            <li><a href="index.html#products-section" class="nav-link">Ürünlerimiz</a></li>
+            <li><a href="index.html#work-section" class="nav-link">E-Dönüşüm</a></li>
+            <li><a href="about.html" class="nav-link">Hakkımızda</a></li>
+            <li><a href="index.html#blog-section" class="nav-link">Blog</a></li>
+            <li><a href="contact.html" class="nav-link">İletişim</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Mobil Menü Butonu -->
+      <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
+        <a href="#" class="site-menu-toggle js-menu-toggle text-black">
+          <span class="icon-menu h3"></span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</header>
+</div>
     <section class="site-section" id="contact-section">
       <div class="container">
-        <div class="row mb-5">
+        <!-- <div class="row mb-5">
           <div class="col-12 text-center">
             <h2 class="site-section-heading">İletişim</h2>
             <p>Bize ulaşmak için iletişim bilgilerini kullanabilir veya formu doldurabilirsiniz.</p>
           </div>
-        </div>
+        </div> -->
         <div class="row justify-content-center align-items-stretch mb-4">
           <div class="col-lg-5 mb-4 mb-lg-0 d-flex align-items-stretch">
             <div class="card shadow w-100" style="border-radius:16px;">
