@@ -1,9 +1,24 @@
+<style>
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+body {
+  padding-top: 120 !important;
+}
+
+</style>
 <!doctype html>
 <html lang="tr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Hakkımızda | Mesa Soft</title>
+  <link rel="shortcut icon" href="images/logo/akinbarlogo.png">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
   <link rel="stylesheet" href="css/aos.css">
@@ -16,14 +31,32 @@
     .feature-card .icon-wrap { width:44px; height:44px; border-radius:10px; background:#eef4ff; display:flex; align-items:center; justify-content:center; color:#2a6ad6; margin-bottom:12px; }
     .stat { text-align:center; padding:20px 10px; }
     .stat h3 { font-weight:800; margin-bottom:6px; }
-    .timeline { position:relative; padding-left:28px; }
-    .timeline::before { content:""; position:absolute; left:12px; top:0; bottom:0; width:2px; background:#e7eef7; }
-    .timeline-item { position:relative; padding-bottom:18px; }
-    .timeline-item::before { content:""; position:absolute; left:6px; top:4px; width:14px; height:14px; background:#2a6ad6; border-radius:50%; box-shadow:0 0 0 4px #e7eef7; }
+    /* Timeline: add enough left padding so text doesn't collide with the vertical line/dot
+       and provide clear vertical spacing between entries. Responsive tweaks for smaller screens. */
+    .timeline { position:relative; padding-left:60px; }
+    /* vertical line */
+    .timeline::before { content:""; position:absolute; left:24px; top:0; bottom:0; width:2px; background:#e7eef7; }
+    .timeline-item { position:relative; margin-bottom:28px; padding-left:84px; }
+    .timeline-item h5 { margin:0 0 10px 0; font-weight:700; color:#21325E; }
+    .timeline-item p { margin:0; line-height:1.7; color:#3a506b; }
+    /* timeline dot */
+    .timeline-item::before { content:""; position:absolute; left:18px; top:8px; width:14px; height:14px; background:#2a6ad6; border-radius:50%; box-shadow:0 0 0 4px #e7eef7; }
+
+    @media (max-width: 992px) {
+      .timeline { padding-left:50px; }
+      .timeline::before { left:22px; }
+      .timeline-item { padding-left:72px; }
+    }
+    @media (max-width: 576px) {
+      .timeline { padding-left:44px; }
+      .timeline::before { left:18px; }
+      .timeline-item { padding-left:64px; }
+    }
   </style>
 </head>
 <body>
   <div class="site-wrap">
+    <div class="fixed-header">
     <div class="top-bar py-2" id="home-section" style="background-color: #21325E !important;">
       <div class="container">
         <div class="row">
@@ -45,38 +78,46 @@
       </div> 
     </div>
 
-    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner" style="top: 0;">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-12 col-xl-3 text-center">
-            <div class="site-logo">
-              <a href="index.html" class="d-flex align-items-center justify-content-center">
-                <img src="images/logo/akinlogo.png" alt="AKINSOFT Logo" class="logo-img">
-                <img src="images/logo/mesalogo.png" alt="Mesa Soft Logo" class="logo-img">
-              </a>
-            </div>
-          </div>
-          <div class="col-12 col-md-9 d-none d-xl-block">
-            <nav class="site-navigation position-relative text-right" role="navigation">
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
-                <li><a href="index.html#products-section" class="nav-link">Ürünlerimiz</a></li>
-                 <li><a href="index.html#work-section" class="nav-link">Sektörel Çözümler</a></li>
-                 <!-- <li><a href="index.html#services-section" class="nav-link">Hizmetlerimiz</a></li> -->
-                <li><a href="about.html" class="nav-link">Hakkımızda</a></li>
-                <li><a href="index.html#blog-section" class="nav-link">Blog</a></li>
-                <li class="active"><a href="contact.html" class="nav-link">İletişim</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
-            <a href="#" class="site-menu-toggle js-menu-toggle text-black">
-              <span class="icon-menu h3"></span>
-            </a>
-          </div>
+  <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Logo Alanı -->
+      <div class="col-12 col-xl-3 text-center">
+        <div class="site-logo">
+          <a href="index.html" class="d-flex align-items-center justify-content-center">
+            <img src="images/logo/akinlogo.png" alt="AKINSOFT Logo" class="logo-img" style="max-width:120px;width:100%;height:auto;">
+            <img src="images/logo/mesalogo.png" alt="Mesa Soft Logo" class="logo-img" style="max-width:120px;width:100%;height:auto;">
+          </a>
         </div>
       </div>
-    </header>
+
+      <!-- Menü Alanı -->
+      <div class="col-12 col-md-9 d-none d-xl-block">
+        <nav class="site-navigation position-relative text-right" role="navigation">
+          <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+            <li><a href="index.html#home-section" class="nav-link">Ana Sayfa</a></li>
+            <!-- <li><a href="index.html#services-section" class="nav-link">Hizmetlerimiz</a></li> -->
+            <li><a href="index.html#products-section" class="nav-link">Ürünlerimiz</a></li>
+            <li><a href="index.html#work-section" class="nav-link">E-Dönüşüm</a></li>
+            <li><a href="about.html" class="nav-link">Hakkımızda</a></li>
+            <li><a href="index.html#blog-section" class="nav-link">Blog</a></li>
+            <li><a href="contact.html" class="nav-link">İletişim</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Mobil Menü Butonu -->
+      <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
+        <a href="#" class="site-menu-toggle js-menu-toggle text-black">
+          <span class="icon-menu h3"></span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</header>
+</div>
     <section class="hero-about py-5">
       <div class="container">
         <div class="row align-items-center">
@@ -354,7 +395,26 @@
             border-top: 1px solid rgba(10,35,66,.12) !important;
           }
         </style>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
   <script src="js/aos.js"></script>
-  <script> AOS.init({ once: true }); </script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jarallax.min.js"></script>
+  <script src="js/jarallax-element.min.js"></script>
+  <script src="js/lozad.min.js"></script>
+  <script src="js/modernizr.min.js"></script>
+  <script src="js/three.min.js"></script>
+  <script src="js/TweenMax.min.js"></script>
+  <script src="js/OBJLoader.js"></script>
+  <script src="js/ParticleHead.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

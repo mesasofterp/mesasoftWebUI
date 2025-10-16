@@ -1,6 +1,155 @@
 <!doctype html>
 <html lang="tr">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Akınsoft Erp - Kurumsal Kaynak Planlama</title>
+  <link rel="shortcut icon" href="images/logo/akinbarlogo.png">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #eaf0fa 0%, #f8f9fa 100%);
+      min-height: 100vh;
+    }
+    .site-wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: transparent;
+    }
+    .top-bar {
+      background: linear-gradient(90deg, #21325E 0%, #3A7BD5 100%) !important;
+      color: #fff;
+      box-shadow: 0 2px 12px rgba(33,50,94,0.08);
+    }
+    .site-navbar {
+      background: #fff !important;
+      box-shadow: 0 2px 16px rgba(33,50,94,0.10);
+      border-radius: 0 0 18px 18px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .site-navbar .site-menu .nav-link {
+      color: #21325E !important;
+      font-weight: 500;
+      font-size: 1.08rem;
+      transition: color 0.2s;
+      border-radius: 8px;
+      padding: 8px 18px;
+    }
+    .site-navbar .site-menu .nav-link:hover {
+      background: linear-gradient(90deg, #3A7BD5 0%, #6dd5fa 100%);
+      color: #fff !important;
+    }
+    .site-logo img {
+      filter: drop-shadow(0 2px 8px rgba(33,50,94,0.10));
+      max-height: 48px;
+    }
+    section[style*="min-height"] {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 32px rgba(33,50,94,0.10);
+      margin: 32px auto;
+      max-width: 1200px;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      min-height: 60vh;
+    }
+    @media (max-width: 900px) {
+      section[style*="min-height"] {
+        flex-direction: column;
+        max-width: 98vw;
+        margin: 16px auto;
+        min-height: unset;
+      }
+    }
+    .program-list li.animated-btn {
+      background: #fff;
+      margin-bottom: 20px;
+      padding: 20px 28px;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: box-shadow 0.2s, transform 0.2s;
+      box-shadow: 0 1px 6px rgba(44,62,80,0.07);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .program-list li.animated-btn::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 0;
+      background: linear-gradient(90deg, #2980b9 0%, #6dd5fa 100%);
+      transition: width 0.5s;
+      z-index: 0;
+      border-radius: 10px;
+    }
+    .program-list li.animated-btn:hover::before {
+      width: 100%;
+    }
+    .program-list li.animated-btn span {
+      position: relative;
+      z-index: 1;
+      transition: color 0.2s;
+    }
+    .program-list li.animated-btn:hover span {
+      color: #fff;
+    }
+    .program-list li.animated-btn:hover {
+      box-shadow: 0 4px 18px rgba(44,62,80,0.18);
+      transform: scale(1.04);
+    }
+  </style>
+    <style>
+      .animated-btn {
+        background: #fff;
+        margin-bottom: 20px;
+        padding: 20px 28px;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: box-shadow 0.2s, transform 0.2s;
+        box-shadow: 0 1px 6px rgba(44,62,80,0.07);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .animated-btn::before {
+        content: "";
+        position: absolute;
+        left: 0; top: 0; bottom: 0;
+        width: 0;
+        background: linear-gradient(90deg, #2980b9 0%, #6dd5fa 100%);
+        transition: width 0.5s;
+        z-index: 0;
+        border-radius: 10px;
+      }
+      .animated-btn:hover::before {
+        width: 100%;
+      }
+      .animated-btn:hover {
+        box-shadow: 0 4px 18px rgba(44,62,80,0.18);
+        transform: scale(1.04);
+      }
+      .animated-btn span {
+        position: relative;
+        z-index: 1;
+        transition: color 0.2s;
+      }
+      .animated-btn:hover span {
+        color: #fff;
+      }
+    </style>
+=======
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Wolvox ERP</title>
@@ -169,6 +318,7 @@
 				color: #fff;
 			}
 		</style>
+>>>>>>> main
 </head>
 <body>
 

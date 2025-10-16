@@ -94,7 +94,7 @@ Background.headparticle = function() {
    function introAnimation() {
       if ($('.site-blocks-cover-form').length) {
         TweenMax.to(Background.camera.position, 2.5, { y: 80, ease: Power2.easeInOut });
-        var scrollTarget = $('.site-blocks-cover-form').offset().top - 150;
+        var scrollTarget = $('.site-blocks-cover-form').offset().top - 180;
         $('html, body').animate({
             scrollTop: scrollTarget
         }, 2500, 'easeInOutExpo', function() {

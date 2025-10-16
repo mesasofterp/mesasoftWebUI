@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online İşlemler - Mesa Soft</title>
+    <link rel="shortcut icon" href="images/logo/akinbarlogo.png">
+    <meta name="description" content="Mesa Soft Online İşlemler - AKINSOFT fiyatlandırma ve online hizmetler">
+    <meta name="keywords" content="AKINSOFT, online işlemler, fiyatlandırma, WOLVOX, ERP, yazılım fiyatları">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .page-title {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .page-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+        
+        .iframe-container {
+            width: 100%;
+            height: 1000px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .iframe-container:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+        
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-container {
+                margin: 10px;
+                padding: 20px 15px;
+                border-radius: 15px;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+            
+            .iframe-container {
+                height: 800px;
+            }
+            
+            .back-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px 0;
+            }
+            
+            .main-container {
+                margin: 5px;
+                padding: 15px 10px;
+            }
+            
+            .page-title {
+                font-size: 1.8rem;
+                margin-bottom: 25px;
+            }
+            
+            .iframe-container {
+                height: 700px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            Ana Sayfaya Dön
+        </a>
+        
+        <h1 class="page-title">Online İşlemler</h1>
+        
+        <div class="iframe-container">
+            <iframe
+                src="https://abakus.akinsoft.net/?prog_kodu=WOL8"
+                width="100%"
+                height="1000px"
+                frameborder="0"
+                loading="lazy"
+                title="AKINSOFT Online İşlemler - Fiyatlandırma">
+            </iframe>
+        </div>
+        
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

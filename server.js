@@ -4,7 +4,7 @@ const cors = require('cors');
 const multer = require('multer'); // multer paketini dahil et
 
 const app = express();
-const port = 3000; // Sunucunun çalışacağı port
+const port = 1905; // Sunucunun çalışacağı port
 const upload = multer(); // multer'ı başlat
 
 // Gelen istekleri okuyabilmek için gerekli ara yazılımlar (middleware)
