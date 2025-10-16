@@ -3,11 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>İletişim | Mesa Soft</title>
+  <title>Hakkımızda | Mesa Soft</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .hero-about { background: linear-gradient(180deg, #0d4da3 0%, #1670d8 100%); color:#fff; position:relative; overflow:hidden; }
+    .hero-about h1 { font-weight:900; letter-spacing:.5px; }
+    .hero-badge { display:inline-block; padding:6px 12px; border:1px solid rgba(255,255,255,.5); border-radius:999px; font-size:.85rem; opacity:.9; }
+    .feature-card { background:#fff; border-radius:14px; box-shadow:0 10px 24px rgba(0,0,0,.06); height:100%; padding:24px; }
+    .feature-card .icon-wrap { width:44px; height:44px; border-radius:10px; background:#eef4ff; display:flex; align-items:center; justify-content:center; color:#2a6ad6; margin-bottom:12px; }
+    .stat { text-align:center; padding:20px 10px; }
+    .stat h3 { font-weight:800; margin-bottom:6px; }
+    .timeline { position:relative; padding-left:28px; }
+    .timeline::before { content:""; position:absolute; left:12px; top:0; bottom:0; width:2px; background:#e7eef7; }
+    .timeline-item { position:relative; padding-bottom:18px; }
+    .timeline-item::before { content:""; position:absolute; left:6px; top:4px; width:14px; height:14px; background:#2a6ad6; border-radius:50%; box-shadow:0 0 0 4px #e7eef7; }
+  </style>
 </head>
 <body>
   <div class="site-wrap">
@@ -47,10 +60,10 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
-                <li><a href="index.html#services-section" class="nav-link">Hizmetlerimiz</a></li>
                 <li><a href="index.html#products-section" class="nav-link">Ürünlerimiz</a></li>
+                 <li><a href="index.html#work-section" class="nav-link">Sektörel Çözümler</a></li>
+                 <!-- <li><a href="index.html#services-section" class="nav-link">Hizmetlerimiz</a></li> -->
                 <li><a href="about.html" class="nav-link">Hakkımızda</a></li>
-                <li><a href="index.html#work-section" class="nav-link">Sektörel Çözümler</a></li>
                 <li><a href="index.html#blog-section" class="nav-link">Blog</a></li>
                 <li class="active"><a href="contact.html" class="nav-link">İletişim</a></li>
               </ul>
@@ -64,83 +77,89 @@
         </div>
       </div>
     </header>
-
-    <section class="site-section" id="contact-section">
+    <section class="hero-about py-5">
       <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center">
-            <h2 class="site-section-heading">İletişim</h2>
-            <p>Bize ulaşmak için iletişim bilgilerini kullanabilir veya formu doldurabilirsiniz.</p>
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4" data-aos="fade-right">
+            <span class="hero-badge mb-3">Biz Kimiz?</span>
+            <h1 class="mb-3">İşletmelerin Dijital Dönüşüm Yol Arkadaşı</h1>
+            <p class="lead mb-4" style="opacity:.95;">Mesa Soft, AKINSOFT Yetkili Çözüm Ortağı olarak ERP, e‑Dönüşüm ve sektörel yazılım çözümleriyle verimlilik ve kârlılığı artıran uçtan uca teknolojik hizmetler sunar.</p>
+          </div>
+          <div class="col-lg-6 mb-4 text-center" data-aos="fade-left">
+            <img src="images/about_1.jpg" alt="Mesa Soft" class="img-fluid rounded shadow" style="max-width:520px;">
           </div>
         </div>
-        <div class="row justify-content-center align-items-stretch mb-4">
-          <div class="col-lg-5 mb-4 mb-lg-0 d-flex align-items-stretch">
-            <div class="card shadow w-100" style="border-radius:16px;">
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-3">
-                  <span class="icon-building mr-2" style="font-size:2rem;color:#0a2342;"></span>
-                  <h3 class="card-title mb-0" style="font-size: 1.45rem; color: #0a2342; font-weight:800;">Akınsoft Bölge Bayi - Mesasoft ERP Software</h3>
-                </div>
-                <div class="mb-3">
-                  <span class="icon-map-marker mr-2" style="color:#0a2342;"></span>
-                  <span style="font-weight:600; color:#21325E;">Adres:</span>
-                  <div style="margin-left:2.2rem; color:#3a506b; font-size:1.05rem;">Akros İstanbul, Barbaros Hayrettin Paşa, 1995. Sk. No:1-3 Kat:29 Daire No:472, 34522 Esenyurt/İstanbul</div>
-                </div>
-                <div class="mb-3">
-                  <span class="icon-phone mr-2" style="color:#0a2342;"></span>
-                  <span style="font-weight:600; color:#21325E;">Telefon:</span>
-                  <a href="tel:+905414555837" style="color:#3a506b; font-size:1.08rem; font-weight:500; margin-left:0.5rem;">0541 455 58 37</a>
-                </div>
-                <div class="mb-3">
-                  <span class="icon-envelope mr-2" style="color:#0a2342;"></span>
-                  <span style="font-weight:600; color:#21325E;">E-Mail:</span>
-                  <a href="mailto:info@mesasoft.com.tr" style="color:#3a506b; font-size:1.08rem; font-weight:500; margin-left:0.5rem;">info@mesasoft.com.tr</a>
-                </div>
-                <div class="mb-3">
-                  <span class="icon-clock-o mr-2" style="color:#0a2342;"></span>
-                  <span style="font-weight:600; color:#21325E;">Çalışma Saatleri:</span>
-                  <ul class="list-unstyled mb-0" style="margin-left:2.2rem; color:#3a506b; font-size:1.01rem;">
-                    <li>Pazartesi: 09:00–18:00</li>
-                    <li>Salı: 09:00–18:00</li>
-                    <li>Çarşamba: 09:00–18:00</li>
-                    <li>Perşembe: 09:00–18:00</li>
-                    <li>Cuma: 09:00–18:00</li>
-                    <li>Cumartesi: 12:00–16:00</li>
-                    <li>Pazar: <span style="color:#c00;font-weight:600;">Kapalı</span></li>
-                  </ul>
-                </div>
+      </div>
+    </section>
+
+    <section class="site-section pt-5">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-md-12 text-center">
+            <h2 class="site-section-heading">Neden Mesa Soft?</h2>
+            <p class="lead">İş sonuçlarına odaklı yaklaşım, deneyimli ekip ve güçlü iş ortaklıkları.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up">
+            <div class="feature-card">
+              <div class="icon-wrap"><span class="icon-star"></span></div>
+              <h4>Uzman Danışmanlık</h4>
+              <p>ERP projelerinde analiz, kurulum, eğitim ve yaygınlaştırmada uçtan uca destek.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="50">
+            <div class="feature-card">
+              <div class="icon-wrap"><span class="icon-handshake-o"></span></div>
+              <h4>Müşteri Başarısı</h4>
+              <p>İhtiyaçlarınıza özel yol haritası ve sürdürülebilir başarı için yakın iş birliği.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-card">
+              <div class="icon-wrap"><span class="icon-cogs"></span></div>
+              <h4>Özelleştirilebilir Çözümler</h4>
+              <p>Modüler mimari ve entegrasyonlarla büyüyen işletmelere esnek altyapı.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="feature-card">
+              <div class="icon-wrap"><span class="icon-clock-o"></span></div>
+              <h4>Hızlı Destek</h4>
+              <p>7/24 destek anlayışıyla kritik süreçlerinizde kesintisiz hizmet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-section pt-0 pb-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-4" data-aos="fade-right">
+            <h3 class="mb-3">Hikayemiz</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h5>Kuruluş</h5>
+                <p>KOBİ'lerin dijital dönüşümüne katkı sağlamak amacıyla bir araya gelen ekip, Mesa Soft'u kurdu.</p>
+              </div>
+              <div class="timeline-item">
+                <h5>AKINSOFT İş Ortaklığı</h5>
+                <p>AKINSOFT Yetkili Çözüm Ortağı olarak ERP projelerinde uzmanlaştık.</p>
+              </div>
+              <div class="timeline-item">
+                <h5>Bugün</h5>
+                <p>Çeşitli sektörlerde onlarca projeyle büyüyen bir ekosistem oluşturduk.</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-7 d-flex align-items-stretch">
-            <form id="contact-form" class="p-5 bg-white shadow rounded w-100" style="border-radius:16px;">
-              <h2 class="h5 mb-2 text-center">İletişim Formu</h2>
-              <div id="form-messages" class="mb-3"></div>
-              <div class="form-group">
-                <input type="text" id="fullname" name="fullname" class="form-control mb-2" placeholder="İsim Soyisim" required>
-              </div>
-              <div class="form-group">
-                <input type="text" id="company" name="company" class="form-control mb-2" placeholder="Ticari Ünvan">
-              </div>
-              <div class="form-group">
-                <input type="email" id="email" name="email" class="form-control mb-2" placeholder="E-Mail" required>
-              </div>
-              <div class="form-group">
-                <input type="text" id="phone" name="phone" class="form-control mb-2" placeholder="Telefon">
-              </div>
-              <div class="form-group">
-                <textarea name="message" id="message" cols="30" rows="4" class="form-control mb-3" placeholder="Mesajınız" required></textarea>
-              </div>
-              <div class="form-group text-center">
-                <input type="submit" value="Mesajı Gönder" class="btn btn-primary btn-block text-white">
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="row mb-5">
-          <div class="col-12">
-            <div style="border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.08);margin-bottom:24px;">
-              <iframe src="https://www.google.com/maps?q=Barbaros+Hayrettin+Pa%C5%9Fa+Mahallesi+1995.+Sokak+No+1-3+Daire+472+Akros+%C4%B0stanbul,+Esenyurt,+%C4%B0stanbul,+34100&output=embed" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <div class="col-md-6 mb-4" data-aos="fade-left">
+            <h3 class="mb-3">Rakamlarla Mesa Soft</h3>
+            <div class="row">
+              <div class="col-6 col-lg-3 stat"><h3>50+</h3><div>Tamamlanan Proje</div></div>
+              <div class="col-6 col-lg-3 stat"><h3>10+</h3><div>Sektör Deneyimi</div></div>
+              <div class="col-6 col-lg-3 stat"><h3>7/24</h3><div>Destek</div></div>
+              <div class="col-6 col-lg-3 stat"><h3>%99</h3><div>Müşteri Memnuniyeti</div></div>
             </div>
           </div>
         </div>
@@ -271,39 +290,71 @@
           }
         </style>
       </footer>
-  </div>
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script>
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-      // Formun normal gönderimini engelle
-      event.preventDefault();
-
-      var form = this;
-      var formData = new FormData(form);
-      var formMessages = document.getElementById('form-messages');
-
-      formMessages.innerHTML = '<div class="alert alert-info">Mesajınız gönderiliyor...</div>';
-
-      // Node.js sunucusuna verileri gönder
-      fetch('http://localhost:3000/api/contact', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          formMessages.innerHTML = '<div class="alert alert-success">' + data.message + '</div>';
-          form.reset(); // Formu temizle
-        } else {
-          formMessages.innerHTML = '<div class="alert alert-danger">' + data.message + '</div>';
-        }
-      })
-      .catch(error => {
-        console.error('Hata:', error);
-        formMessages.innerHTML = '<div class="alert alert-danger">Bir hata oluştu. Lütfen daha sonra tekrar deneyin.</div>';
-      });
-    });
-  </script>
+        <style>
+          .pro-footer {
+            background: linear-gradient(120deg, #e3ecfa 0%, #b5c9e8 100%);
+            color: #21325e;
+            padding-top: 48px;
+            padding-bottom: 24px;
+            font-size: 1.01rem;
+          }
+          .pro-footer .footer-heading {
+            color: #0a2342;
+            font-size: 1.08rem;
+            font-weight: 700;
+            margin-bottom: 1.1rem;
+            letter-spacing: .01em;
+          }
+          .pro-footer p, .pro-footer address, .pro-footer ul, .pro-footer li, .pro-footer a {
+            color: #21325e;
+            font-size: 1.01rem;
+            opacity: 0.97;
+          }
+          .pro-footer a:hover {
+            color: #0a2342;
+            text-decoration: underline;
+          }
+          .pro-footer .pro-footer-menu a {
+            color: #21325e;
+            transition: color .2s;
+          }
+          .pro-footer .pro-footer-menu a:hover {
+            color: #0a2342;
+          }
+          .pro-footer .pro-footer-contact a {
+            color: #21325e;
+            font-weight: 500;
+          }
+          .pro-footer .pro-footer-contact a:hover {
+            color: #0a2342;
+          }
+          .pro-footer .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+          }
+          .pro-footer .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(10,35,66,0.07);
+            color: #0a2342;
+            font-size: 1.3rem;
+            transition: background .2s, color .2s;
+          }
+          .pro-footer .footer-social a:hover {
+            background: #0a2342;
+            color: #fff;
+          }
+          .pro-footer .border-top {
+            border-top: 1px solid rgba(10,35,66,.12) !important;
+          }
+        </style>
+  <script src="js/aos.js"></script>
+  <script> AOS.init({ once: true }); </script>
 </body>
 </html>
