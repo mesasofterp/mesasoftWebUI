@@ -13,7 +13,8 @@
 			height: 100%;
 			margin: 0;
 			padding: 0;
-			background: linear-gradient(135deg, #eaf0fa 0%, #f8f9fa 100%);
+			background: url('images/huji20.jpg') no-repeat center center fixed;
+			background-size: cover;
 			min-height: 100vh;
 		}
 		.site-wrap {
@@ -61,7 +62,7 @@
 			max-height: 48px;
 		}
 		.main-content {
-			margin-top: 140px;
+			margin-top: 0;
 		}
 		section[style*="min-height"] {
 			background: #fff;
@@ -147,7 +148,7 @@
 				position: absolute;
 				left: 0; top: 0; bottom: 0;
 				width: 0;
-				background: linear-gradient(90deg, #2980b9 0%, #6dd5fa 100%);
+				background: linear-gradient(90deg, #21325E 0%, #476cc8 100%);
 				transition: width 0.5s;
 				z-index: 0;
 				border-radius: 10px;
@@ -229,45 +230,41 @@
 
 		</header>
 
-		<div class="main-content">
-			<section style="width:100vw; min-height:60vh; display:flex; justify-content:center; align-items:stretch; background:#fff;">
-				<div style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; background:linear-gradient(135deg,#f8fafd 0%,#eaf0fa 100%); padding:48px 0; border-radius:18px 0 0 18px;">
-					<div style="width:90%; max-width:700px; margin-bottom:32px;">
-						<div style="background:#fff; border-radius:16px; box-shadow:0 4px 32px rgba(33,50,94,0.10); padding:32px 28px; text-align:center;">
-							<img src="images/logo/akinlogo.png" alt="AKINSOFT Servis Programı" style="height:56px; margin-bottom:18px; filter:drop-shadow(0 2px 8px rgba(33,50,94,0.10));">
+		<div class="main-content" style="margin-top:0;">
+			<section id="main-product-section" style="width:100vw; min-height:60vh; background:#fff; margin-bottom:0; padding-bottom:0; display:grid; grid-template-columns:3fr 1fr; gap:0; align-items:stretch;">
+				<div style="display:flex; flex-direction:column; align-items:center; justify-content:flex-start; background:linear-gradient(135deg,#f8fafd 0%,#eaf0fa 100%); padding:72px 0 0 0; width:100%; min-height:700px;">
+						<div style="width:92%; max-width:700px; margin-bottom:24px; text-align:center;">
+							<img src="images/logo/akinlogo.png" alt="AKINSOFT Wolvox ERP" style="height:56px; margin-bottom:18px; filter:drop-shadow(0 2px 8px rgba(33,50,94,0.10));">
 							<h1 style="color:#21325E; font-size:2.1rem; font-weight:700; margin-bottom:18px;">Akınsoft Servis Programı</h1>
-							<p style="font-size:1.15rem; color:#3A7BD5; margin-bottom:18px; font-weight:500;">Kurumsal servis ve bakım süreçlerinizi dijitalleştirin, müşteri memnuniyetini artırın.</p>
-							<p style="font-size:1.08rem; color:#444; margin-bottom:0;">Servis yönetimi, iş emri takibi, teklif ve fatura süreçleri, müşteri ve cihaz entegrasyonu ile tüm operasyonlarınızı tek merkezden yönetin.</p>
+							<p style="font-size:1.15rem; color:#3A7BD5; margin-bottom:18px; font-weight:500;">Servis süreçlerinizi dijitalleştirin, müşteri memnuniyetini artırın!</p>
+							<iframe src="https://www.youtube.com/embed/YUipiiIKaVU" title="Servis Programı Tanıtım Videosu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:92%; max-width:700px; height:340px; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.08); background:#000;"></iframe>
 						</div>
 					</div>
-					<iframe src="https://www.youtube.com/embed/4QwQhQwQhQw" title="Akınsoft Servis Programı Tanıtım Videosu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:90%; max-width:700px; height:400px; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.08); background:#000; margin-bottom:32px;"></iframe>
-					<div style="width:90%; max-width:700px;">
-						<div style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(33,50,94,0.08); padding:28px 24px;">
-							<h3 style="color:#21325E; font-size:1.3rem; margin-bottom:18px; font-weight:600;">Öne Çıkan Özellikler</h3>
-							<div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+					<div style="display:flex; flex-direction:column; justify-content:center; align-items:stretch; gap:24px; padding:48px 32px 48px 0; width:100%;">
+						<div style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(33,50,94,0.08); padding:28px 24px; width:100%; max-width:340px; margin-top:0; display:flex; flex-direction:column; align-items:stretch;">
+							<h3 style="color:#21325E; font-size:1.3rem; margin-bottom:18px; font-weight:600; text-align:left;">Öne Çıkan Özellikler</h3>
+							<div style="display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:32px; min-height:320px; align-items:center;">
 								<div style="background:#f8fafd; border-radius:10px; padding:18px; display:flex; align-items:center; gap:12px;">
 									<span class="icon-wrench" style="font-size:1.5rem; color:#3A7BD5;"></span>
-									<span>Servis ve bakım yönetimi</span>
+									<span>Servis kaydı ve takibi</span>
 								</div>
 								<div style="background:#f8fafd; border-radius:10px; padding:18px; display:flex; align-items:center; gap:12px;">
-									<span class="icon-file-text" style="font-size:1.5rem; color:#3A7BD5;"></span>
-									<span>Teklif, iş emri ve fatura takibi</span>
+									<span class="icon-user" style="font-size:1.5rem; color:#3A7BD5;"></span>
+									<span>Müşteri ve cihaz yönetimi</span>
+								</div>
+								<div style="background:#f8fafd; border-radius:10px; padding:18px; display:flex; align-items:center; gap:12px;">
+									<span class="icon-calendar" style="font-size:1.5rem; color:#3A7BD5;"></span>
+									<span>Teknisyen atama ve iş planı</span>
 								</div>
 								<div style="background:#f8fafd; border-radius:10px; padding:18px; display:flex; align-items:center; gap:12px;">
 									<span class="icon-bar-chart" style="font-size:1.5rem; color:#3A7BD5;"></span>
-									<span>Detaylı servis raporları</span>
-								</div>
-								<div style="background:#f8fafd; border-radius:10px; padding:18px; display:flex; align-items:center; gap:12px;">
-									<span class="icon-users" style="font-size:1.5rem; color:#3A7BD5;"></span>
-									<span>Müşteri ve cihaz entegrasyonu</span>
+									<span>Detaylı raporlama ve analiz</span>
 								</div>
 							</div>
-							<div style="text-align:center; margin-top:28px;">
-								<a href="contact.html" style="display:inline-block; background:linear-gradient(90deg,#21325E 0%,#3A7BD5 100%); color:#fff; font-weight:bold; padding:16px 40px; border-radius:10px; font-size:1.15rem; text-decoration:none; box-shadow:0 2px 8px rgba(33,50,94,0.08); transition:background 0.2s;">Ücretsiz Kullanım Talep Et</a>
+							<div style="width:100%; text-align:center;">
+								<a href="contact.html" style="display:inline-block; background:linear-gradient(90deg,#21325E 0%,#3A7BD5 100%); color:#fff; font-weight:bold; padding:16px 40px; border-radius:10px; font-size:1.15rem; text-decoration:none; box-shadow:0 2px 8px rgba(33,50,94,0.08); transition:background 0.2s;">Servis Programı için Demo Talep Et</a>
 							</div>
 						</div>
-					</div>
-				</div>
 			<!-- Kayan bar section'dan sonra alt alta gelecek şekilde taşındı -->
 <style>
 	.scroll-bar-container {
@@ -310,18 +307,72 @@
     }
 </style>
 			</section>
+<div style="width:100vw; display:flex; justify-content:center; align-items:center; margin:0; padding:0;">
+			<div class="animated-divider" style="width:100%; max-width:1175px; height:5px; border-radius:3px; background:linear-gradient(90deg,#e0e3e8 0%,#b5b8be 50%,#e0e3e8 100%); position:relative; overflow:hidden;">
+		<div style="position:absolute; left:-30vw; top:0; height:100%; width:30vw; background:linear-gradient(90deg,rgba(180,180,190,0.0) 0%,rgba(180,180,190,0.5) 50%,rgba(180,180,190,0.0) 100%); opacity:0.7; filter:blur(2px); animation:dividerMove 2.5s linear infinite;"></div>
+		<div class="divider-dot" style="position:absolute; top:50%; left:0; width:18px; height:18px; background:#21325E; border-radius:50%; transform:translateY(-50%); box-shadow:0 0 8px #21325E88; animation:dotMove 2.5s linear infinite;"></div>
+	</div>
+</div>
+<style>
+@keyframes dividerMove {
+	0% { left: -30vw; }
+	100% { left: 80vw; }
+}
+@keyframes dotMove {
+	0% { left: 0; }
+	100% { left: calc(80vw - 18px); }
+}
+</style>
+<section id="ozel-section" style="width:100vw; min-height:180px; background:#21325E; display:flex; flex-direction:row; align-items:stretch; justify-content:center; border-radius:0 0 18px 18px; margin-top:0; margin-bottom:0; box-shadow:0 2px 12px rgba(33,50,94,0.07);">
+    <div style="flex:3; padding:32px 28px; display:flex; flex-direction:column; justify-content:center; color:#fff;">
+		<h2 style="color:#28b823; font-size:2rem; font-weight:700; margin-bottom:18px;">Servis Programı Çözümleri</h2>
+		<p style="font-size:1.15rem; color:#3A7BD5; margin-bottom:18px; font-weight:500;">Küçük ve orta ölçekli servis işletmeleri için geliştirilmiş kapsamlı servis yönetim programıdır.</p>
+		<ul style="font-size:1.08rem; color:#fff; margin-bottom:18px; padding-left:18px;">
+			<li>Servis kaydı, takibi ve yönetimi.</li>
+			<li>Müşteri, cihaz ve garanti süreçleri.</li>
+			<li>Teknisyen atama ve iş planı oluşturma.</li>
+			<li>Yedek parça ve stok yönetimi.</li>
+			<li>Fatura, teklif ve tahsilat işlemleri.</li>
+			<li>Mobil uygulama ile sahada servis yönetimi.</li>
+			<li>Detaylı raporlama ve analiz.</li>
+			<li>Yetkilendirme ve kullanıcı yönetimi.</li>
+			<li>Doküman ve dosya yönetimi.</li>
+		</ul>
+		<div style="font-size:1.08rem; color:#3A7BD5; margin-bottom:12px; font-weight:600;">Desteklenen modüller ve entegrasyonlar:</div>
+		<ul style="font-size:1.08rem; color:#fff; margin-bottom:18px; padding-left:18px;">
+			<li>Servis Yönetimi</li>
+			<li>Müşteri & Cihaz</li>
+			<li>Teknisyen & İş Planı</li>
+			<li>Yedek Parça & Stok</li>
+			<li>Fatura & Teklif</li>
+		</ul>
+		<p style="font-size:1.08rem; color:#fff; margin-bottom:0;">Servis Programı ile tüm servis süreçlerinizi dijitalleştirin ve verimli şekilde yönetin.</p>
+		<h2 style="color:#21325E; font-size:2rem; font-weight:700; margin-bottom:18px;">Servis Programı Çözümleri</h2>
+    </div>
+    <div style="flex:1; padding:32px 18px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px;">
+        <img src="images/wolvox-erp-obj1.webp" alt="Wolvox ERP Obj1" style="width:100%; max-width:900px; border-radius:14px; box-shadow:0 2px 12px rgba(33,50,94,0.10); object-fit:cover; animation:floatY 2.8s ease-in-out infinite alternate;">
+    </div>
+<style>
+@keyframes floatY {
+	0% { transform: translateY(0); }
+	50% { transform: translateY(-32px); }
+	100% { transform: translateY(0); }
+}
+</style>
+		</div>
+	</section>
 <div class="scroll-bar-container" style="width:100vw; overflow:hidden; position:relative; border-radius:0; box-shadow:none; background:linear-gradient(120deg, #e3ecfa 0%, #b5c9e8 100%); margin-bottom:0;">
 	<div id="scrollBar" class="scroll-bar" style="display:flex; gap:10px; width:max-content; animation:scrollBarAnim 30s linear infinite; padding:8px 0; min-height:36px; align-items:center; justify-content:center; height:48px;">
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #ffb6a9 0%, #ff7e67 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Restoran Yönetimi</span></button>
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #ffb6a9 0%, #ff7e67 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Hızlı Satış</span></button>
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #ffb6a9 0%, #ff7e67 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Genel Muhasebe</span></button>
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #ffb6a9 0%, #ff7e67 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox ERP</span></button>
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #ffb6a9 0%, #ff7e67 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox CRM</span></button>
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #ffb6a9 0%, #ff7e67 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Restoran Yönetimi</span></button>
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #ffb6a9 0%, #ff7e67 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Hızlı Satış</span></button>
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #ffb6a9 0%, #ff7e67 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Genel Muhasebe</span></button>
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #ffb6a9 0%, #ff7e67 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox ERP</span></button>
-		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #ffb6a9 0%, #ff7e67 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox CRM</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Restoran Yönetimi</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Hızlı Satış</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f9f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Genel Muhasebe</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox ERP</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox CRM</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Restoran Yönetimi</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Hızlı Satış</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Genel Muhasebe</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox ERP</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox CRM</span></button>
 	</div>
 </div>
 <script>
