@@ -14,11 +14,11 @@ app.use(express.urlencoded({ extended: true })); // Form verilerini işle
 
 // --- VERİTABANI BİLGİLERİNİZİ BURAYA GİRİN ---
 const dbConfig = {
-    user: 'sa',
-    password: 'Mesa*2025',
-    server: '193.111.78.38', // veya sunucu IP/adı
-    database: 'Mesasoft',
-    port: 1907, // Port numarasını buraya ekleyin
+    user: '***',
+    password: '***',
+    server: '***', // veya sunucu IP/adı
+    database: '***',
+    port: 111, // Port numarasını buraya ekleyin
     options: {
         encrypt: false, // Azure SQL için true yapın
         trustServerCertificate: true // Lokal geliştirme için true yapın
