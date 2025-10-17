@@ -350,11 +350,14 @@
 	font-size: 1.15rem;
 	text-decoration: none;
 	box-shadow: 0 2px 8px rgba(33,50,94,0.08);
-	transition: background 0.2s;
+	transition: background 0.2s, transform 0.18s cubic-bezier(.4,1.6,.6,1), box-shadow 0.18s cubic-bezier(.4,1.6,.6,1);
+	will-change: transform, box-shadow;
 }
 .modern-demo-btn:hover {
 	background: linear-gradient(90deg,#28b823 0%,#3A7BD5 100%);
 	color: #fff;
+	transform: scale(1.07) translateY(-2px);
+	box-shadow: 0 8px 32px rgba(33,50,94,0.18), 0 2px 16px #28b82333;
 }
 </style>
 			<!-- Kayan bar section'dan sonra alt alta gelecek şekilde taşındı -->
