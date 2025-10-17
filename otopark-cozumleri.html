@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="tr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Akınsoft Otopark Çözümleri Programı</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			background: url('images/huji20.jpg') no-repeat center center fixed;
+			background-size: cover;
+			min-height: 100vh;
+		}
+		.site-wrap {
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			background: transparent;
+		}
+		.top-bar {
+			background: linear-gradient(90deg, #21325E 0%, #3A7BD5 100%) !important;
+			color: #fff;
+			box-shadow: 0 2px 12px rgba(33,50,94,0.08);
+			position: fixed;
+			width: 100vw;
+			top: 0;
+			left: 0;
+			z-index: 1030;
+		}
+		.site-navbar {
+			background: #fff !important;
+			box-shadow: 0 2px 16px rgba(33,50,94,0.10);
+			border-radius: 0 0 18px 18px;
+			margin-bottom: 0;
+			padding-bottom: 0;
+			position: fixed;
+			width: 100vw;
+			top: 48px;
+			left: 0;
+			z-index: 1020;
+		}
+		.site-navbar .site-menu .nav-link {
+			color: #21325E !important;
+			font-weight: 500;
+			font-size: 1.08rem;
+			transition: color 0.2s;
+			border-radius: 8px;
+			padding: 8px 18px;
+		}
+		.site-navbar .site-menu .nav-link:hover {
+			background: linear-gradient(90deg, #3A7BD5 0%, #6dd5fa 100%);
+			color: #fff !important;
+		}
+		.site-logo img {
+			filter: drop-shadow(0 2px 8px rgba(33,50,94,0.10));
+			max-height: 48px;
+		}
+		.main-content {
+			margin-top: 0;
+		}
+		section[style*="min-height"] {
+			background: #fff;
+			border-radius: 18px;
+			box-shadow: 0 4px 32px rgba(33,50,94,0.10);
+			margin: 32px auto;
+			max-width: 1200px;
+			padding: 0;
+			display: flex;
+			flex-direction: row;
+			min-height: 60vh;
+		}
+		@media (max-width: 900px) {
+			section[style*="min-height"] {
+				flex-direction: column;
+				max-width: 98vw;
+				margin: 16px auto;
+				min-height: unset;
+			}
+			.main-content {
+				margin-top: 180px;
+			}
+			.site-navbar {
+				top: 56px;
+			}
+		}
+		.program-list li.animated-btn {
+			background: #fff;
+			margin-bottom: 20px;
+			padding: 20px 28px;
+			border-radius: 10px;
+			font-size: 1.2rem;
+			cursor: pointer;
+			transition: box-shadow 0.2s, transform 0.2s;
+			box-shadow: 0 1px 6px rgba(44,62,80,0.07);
+			text-align: center;
+			position: relative;
+			overflow: hidden;
+		}
+		.program-list li.animated-btn::before {
+			content: "";
+			position: absolute;
+			left: 0; top: 0; bottom: 0;
+			width: 0;
+			background: linear-gradient(120deg, #21325e 0%, #4f5d75 100%);
+			transition: width 0.5s;
+			z-index: 0;
+			border-radius: 10px;
+		}
+		.program-list li.animated-btn:hover::before {
+			width: 100%;
+		}
+		.program-list li.animated-btn span {
+			position: relative;
+			z-index: 1;
+			transition: color 0.2s;
+		}
+		.program-list li.animated-btn:hover span {
+			color: #fff;
+		}
+		.program-list li.animated-btn:hover {
+			box-shadow: 0 4px 18px rgba(44,62,80,0.18);
+			transform: scale(1.04);
+		}
+	</style>
+		<style>
+			.animated-btn {
+				background: #fff;
+				margin-bottom: 8px;
+				padding: 4px 10px;
+				border-radius: 5px;
+				font-size: 0.85rem;
+				cursor: pointer;
+				transition: box-shadow 0.2s, transform 0.2s;
+				box-shadow: 0 1px 6px rgba(44,62,80,0.07);
+				text-align: center;
+				position: relative;
+				overflow: hidden;
+				border: none;
+			}
+			.animated-btn::before {
+				content: "";
+				position: absolute;
+				left: 0; top: 0; bottom: 0;
+				width: 0;
+				background: linear-gradient(90deg, #21325E 0%, #476cc8 100%);
+				transition: width 0.5s;
+				z-index: 0;
+				border-radius: 10px;
+			}
+			.animated-btn:hover::before {
+				width: 100%;
+			}
+			.animated-btn:hover {
+				box-shadow: 0 4px 18px rgba(44,62,80,0.18);
+				transform: scale(1.04);
+			}
+			.animated-btn span {
+				position: relative;
+				z-index: 1;
+				transition: color 0.2s;
+				color: #0a2342 !important;
+			}
+			.animated-btn:hover span {
+				color: #fff;
+			}
+		</style>
+</head>
+<body>
+
+			<div class="site-wrap">
+		<div class="top-bar py-2" id="home-section" style="background-color: #21325E !important;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 text-center text-lg-right order-lg-2">
+						<ul class="social-media m-0 p-0">
+							<li><a href="#" class="p-2"><span class="icon-facebook"></span></a></li>
+							<li><a href="https://www.youtube.com/@akinsoft" class="p-2"><span class="icon-youtube"></span></a></li>
+							<li><a href="https://www.instagram.com/mesasoftofficial?igsh=MW1hcDAwc3N2dDU4dw%3D%3D&utm_source=qr " class="p-2"><span class="icon-instagram"></span></a></li>
+							<li><a href="https://www.linkedin.com/company/mesasoft/" class="p-2" target="_blank" rel="noopener"><span class="icon-linkedin"></span></a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 text-center text-lg-left order-lg-1">
+						<p class="mb-0 d-inline-flex">
+							<span class="mr-3"><a href="tel:+902129631990" class="d-flex align-items-center"><span class="icon-phone mr-2"></span><span>+90 212 963 19 90</span></a></span>
+							<span class="mr-3"><a href="tel:+905414555837" class="d-flex align-items-center"><span class="icon-phone mr-2"></span><span>+90 541 455 58 37</span></a></span>
+							<span><a href="mailto:info@mesasoft.com.tr" class="d-flex align-items-center"><span class="icon-envelope mr-2"></span><span>info@mesasoft.com.tr</span></a></span>
+						</p>
+					</div>
+				</div>
+			</div> 
+		</div>
+
+				<header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner" style="top: 48px;">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-12 col-xl-3 text-center">
+						<div class="site-logo">
+							<a href="index.html" class="d-flex align-items-center justify-content-center">
+								<img src="images/logo/akinlogo.png" alt="AKINSOFT Logo" class="logo-img">
+								<img src="images/logo/mesalogo.png" alt="Mesa Soft Logo" class="logo-img">
+							</a>
+						</div>
+					</div>
+					<div class="col-12 col-md-9 d-none d-xl-block">
+						<nav class="site-navigation position-relative text-right" role="navigation">
+							<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+								<li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+								<li><a href="index.html#services-section" class="nav-link">Hizmetlerimiz</a></li>
+								<li><a href="index.html#products-section" class="nav-link">Ürünlerimiz</a></li>
+								<li><a href="index.html#about-section" class="nav-link">Hakkımızda</a></li>
+								<li><a href="index.html#work-section" class="nav-link">Sektörel Çözümler</a></li>
+								<li><a href="index.html#blog-section" class="nav-link">Blog</a></li>
+								<li class="active"><a href="contact.html" class="nav-link">İletişim</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
+						<a href="#" class="site-menu-toggle js-menu-toggle text-black">
+							<span class="icon-menu h3"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</header>
+
+		<div class="main-content" style="margin-top:0;">
+			<section id="main-product-section" style="width:100vw; min-height:60vh; background:#fff; margin-bottom:0; padding-bottom:0; display:grid; grid-template-columns:3fr 1fr; gap:0; align-items:stretch;">
+				<div style="display:flex; flex-direction:column; align-items:center; justify-content:flex-start; background:linear-gradient(135deg,#f8fafd 0%,#eaf0fa 100%); padding:72px 0 0 0; width:100%; min-height:700px;">
+						<div style="width:92%; max-width:700px; margin-bottom:24px; text-align:center;">
+							<img src="images/logo/akinlogo.png" alt="AKINSOFT Otopark Çözümleri" style="height:56px; margin-bottom:18px; filter:drop-shadow(0 2px 8px rgba(33,50,94,0.10));">
+							<h1 style="color:#21325E; font-size:2.1rem; font-weight:700; margin-bottom:18px;">Akınsoft Otopark Çözümleri</h1>
+							<p style="font-size:1.15rem; color:#3A7BD5; margin-bottom:18px; font-weight:500;">Otopark yönetimini dijitalleştirin, araç giriş-çıkış ve ödeme süreçlerini kolayca yönetin!</p>
+							<iframe src="https://www.youtube.com/embed/mmf2sOwesJ4" title="Otopark Çözümleri Tanıtım Videosu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:92%; max-width:700px; height:340px; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.08); background:#000;"></iframe>
+						</div>
+					</div>
+					<div style="display:flex; flex-direction:column; justify-content:center; align-items:stretch; gap:24px; padding:48px 32px 48px 0; width:100%;">
+						<div style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(33,50,94,0.08); padding:28px 24px; width:100%; max-width:340px; margin-top:0; display:flex; flex-direction:column; align-items:stretch;">
+							<h3 style="color:#21325E; font-size:1.3rem; margin-bottom:18px; font-weight:600; text-align:left;">Öne Çıkan Özellikler</h3>
+							<div style="display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:32px; min-height:320px; align-items:center;">
+								<div style="background:#f8fafd; border-radius:10px; padding:18px; display:flex; align-items:center; gap:12px;">
+									<span class="icon-car" style="font-size:1.5rem; color:#3A7BD5;"></span>
+									<span>Araç giriş-çıkış takibi</span>
+								</div>
+								<div style="background:#f8fafd; border-radius:10px; padding:18px; display:flex; align-items:center; gap:12px;">
+									<span class="icon-credit-card" style="font-size:1.5rem; color:#3A7BD5;"></span>
+									<span>Otopark ücreti hesaplama ve ödeme</span>
+								</div>
+								<div style="background:#f8fafd; border-radius:10px; padding:18px; display:flex; align-items:center; gap:12px;">
+									<span class="icon-user" style="font-size:1.5rem; color:#3A7BD5;"></span>
+									<span>Abone ve müşteri yönetimi</span>
+								</div>
+								<div style="background:#f8fafd; border-radius:10px; padding:18px; display:flex; align-items:center; gap:12px;">
+									<span class="icon-bar-chart" style="font-size:1.5rem; color:#3A7BD5;"></span>
+									<span>Detaylı otopark raporları ve analiz</span>
+								</div>
+							</div>
+							<div style="width:100%; text-align:center;">
+								<a href="contact.html" style="display:inline-block; background:linear-gradient(90deg,#21325E 0%,#3A7BD5 100%); color:#fff; font-weight:bold; padding:16px 40px; border-radius:10px; font-size:1.15rem; text-decoration:none; box-shadow:0 2px 8px rgba(33,50,94,0.08); transition:background 0.2s;">Ücretsiz Demo Talep Et</a>
+							</div>
+						</div>
+			<!-- Kayan bar section'dan sonra alt alta gelecek şekilde taşındı -->
+<style>
+	.scroll-bar-container {
+		background: linear-gradient(120deg, #e3ecfa 0%, #b5c9e8 100%);
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin-bottom: 0 !important;
+        width: 100vw !important;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .scroll-bar {
+        align-items: center;
+        will-change: transform;
+        width: max-content;
+    }
+    @keyframes scrollBarAnim {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+</style>
+<style>
+	 .scroll-bar-container {
+		 background: linear-gradient(120deg, #e3ecfa 0%, #b5c9e8 100%);
+        border-radius: 14px;
+        box-shadow: 0 2px 12px rgba(33,50,94,0.08);
+        padding: 18px 0;
+        margin-bottom: 12px;
+    }
+    .scroll-bar {
+		   align-items: center;
+		   justify-content: center;
+		   height: 48px;
+		   will-change: transform;
+    }
+    @keyframes scrollBarAnim {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+</style>
+			</section>
+<div style="width:100vw; display:flex; justify-content:center; align-items:center; margin:0; padding:0;">
+			<div class="animated-divider" style="width:100%; max-width:1175px; height:5px; border-radius:3px; background:linear-gradient(90deg,#e0e3e8 0%,#b5b8be 50%,#e0e3e8 100%); position:relative; overflow:hidden;">
+		<div style="position:absolute; left:-30vw; top:0; height:100%; width:30vw; background:linear-gradient(90deg,rgba(180,180,190,0.0) 0%,rgba(180,180,190,0.5) 50%,rgba(180,180,190,0.0) 100%); opacity:0.7; filter:blur(2px); animation:dividerMove 2.5s linear infinite;"></div>
+		<div class="divider-dot" style="position:absolute; top:50%; left:0; width:18px; height:18px; background:#21325E; border-radius:50%; transform:translateY(-50%); box-shadow:0 0 8px #21325E88; animation:dotMove 2.5s linear infinite;"></div>
+	</div>
+</div>
+<style>
+@keyframes dividerMove {
+	0% { left: -30vw; }
+	100% { left: 80vw; }
+}
+@keyframes dotMove {
+	0% { left: 0; }
+	100% { left: calc(80vw - 18px); }
+}
+</style>
+<section id="ozel-section" style="width:100vw; min-height:180px; background:#21325E; display:flex; flex-direction:row; align-items:stretch; justify-content:center; border-radius:0 0 18px 18px; margin-top:0; margin-bottom:0; box-shadow:0 2px 12px rgba(33,50,94,0.07);">
+    <div style="flex:3; padding:32px 28px; display:flex; flex-direction:column; justify-content:center; color:#fff;">
+		<h2 style="color:#28b823; font-size:2rem; font-weight:700; margin-bottom:18px;">Otopark Çözümleri</h2>
+		<p style="font-size:1.15rem; color:#3A7BD5; margin-bottom:18px; font-weight:500;">Açık ve kapalı otoparklar, AVM, site ve işletmeler için geliştirilmiş kapsamlı otopark yönetim programıdır.</p>
+		<ul style="font-size:1.08rem; color:#fff; margin-bottom:18px; padding-left:18px;">
+			<li>Araç giriş-çıkış takibi ve otopark süresi hesaplama.</li>
+			<li>Otopark ücreti otomatik hesaplama ve ödeme işlemleri.</li>
+			<li>Abone, müşteri ve araç yönetimi.</li>
+			<li>Farklı tarife ve kampanya tanımlama.</li>
+			<li>Plaka tanıma sistemi entegrasyonu.</li>
+			<li>Fatura, fiş ve makbuz işlemleri.</li>
+			<li>Detaylı otopark raporları ve analiz.</li>
+			<li>Mobil uygulama ile uzaktan otopark yönetimi.</li>
+			<li>Yetkilendirme ve kullanıcı yönetimi.</li>
+			<li>WOLVOX ERP ile tam entegrasyon.</li>
+		</ul>
+		<div style="font-size:1.08rem; color:#3A7BD5; margin-bottom:12px; font-weight:600;">Desteklenen donanım ve entegrasyonlar:</div>
+		<ul style="font-size:1.08rem; color:#fff; margin-bottom:18px; padding-left:18px;">
+			<li>Plaka Tanıma Sistemi</li>
+			<li>Bariyer Kontrol Ünitesi</li>
+			<li>POS ve Ödeme Terminali</li>
+			<li>Mobil Uygulama</li>
+			<li>WOLVOX ERP</li>
+		</ul>
+		<p style="font-size:1.08rem; color:#fff; margin-bottom:0;">Otopark Çözümleri programımız ile tüm otopark süreçlerinizi dijitalleştirin ve kolayca yönetin.</p>
+		<h2 style="color:#21325E; font-size:2rem; font-weight:700; margin-bottom:18px;">Otopark Çözümleri</h2>
+    </div>
+	<div style="flex:1; padding:32px 18px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; min-height:420px;">
+	<img src="images/otopark-1.webp" alt="Otopark Çözümleri Görseli" style="width:100%; max-width:950px; min-width:340px; min-height:340px; height:420px; border-radius:18px; box-shadow:0 4px 24px rgba(33,50,94,0.14); object-fit:cover; animation:floatYWide 3.8s ease-in-out infinite alternate;">
+    </div>
+<style>
+@keyframes floatYWide {
+	0% { transform: translateY(0) scale(1.04); }
+	30% { transform: translateY(-64px) scale(1.08); }
+	60% { transform: translateY(48px) scale(1.04); }
+	100% { transform: translateY(0) scale(1.08); }
+}
+</style>
+		</div>
+	</section>
+<div class="scroll-bar-container" style="width:100vw; overflow:hidden; position:relative; border-radius:0; box-shadow:none; background:linear-gradient(120deg, #e3ecfa 0%, #b5c9e8 100%); margin-bottom:0;">
+	<div id="scrollBar" class="scroll-bar" style="display:flex; gap:10px; width:max-content; animation:scrollBarAnim 30s linear infinite; padding:8px 0; min-height:36px; align-items:center; justify-content:center; height:48px;">
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Restoran Yönetimi</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Hızlı Satış</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f9f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Genel Muhasebe</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox ERP</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox CRM</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Restoran Yönetimi</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Hızlı Satış</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Genel Muhasebe</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox ERP</span></button>
+		<button class="animated-btn" style="min-width:110px; min-height:18px; font-size:0.92rem; padding:4px 8px; background:linear-gradient(120deg, #afff8d 0%, #28b823 100%); border-radius:8px; border:none; color:#f8f9fa; font-weight:500;"><span style="font-size:0.92rem; color:#f8f9fa !important;">Wolvox CRM</span></button>
+	</div>
+</div>
+<script>
+// Otomatik kayan bar için JS gerekmez. Bar CSS animasyonu ile sürekli akacak.
+</script>
+
+<footer class="site-footer pro-footer">
+	<div class="container">
+		<div class="row align-items-start">
+			<div class="col-lg-4 mb-4 mb-lg-0">
+				<div class="d-flex flex-column align-items-start mb-3" style="gap:6px; width:100%; max-width:260px;">
+					<img src="images/logo/akinlogo.png" alt="AKINSOFT" style="height:54px; width:100%; max-width:260px; margin-bottom:2px; filter: drop-shadow(0 2px 8px #b5c9e8); display:block;">
+					<img src="images/logo/mesalogo.png" alt="Mesa Soft" style="height:54px; width:100%; max-width:260px; filter: drop-shadow(0 2px 8px #b5c9e8); display:block;">
+				</div>
+				<h2 class="footer-heading mb-3" style="color:#0a2342; font-size:1.15rem; font-weight:700; letter-spacing:.02em;">Mesa Soft Hakkında</h2>
+				<p style="color:#21325e; font-size:1.01rem;">Mesa Soft, işletmelerin dijital dönüşüm yolculuğunda güvenilir bir iş ortağıdır. AKINSOFT Yetkili Çözüm Ortağı olarak ERP ve e-Dönüşüm çözümleri sunar.</p>
+				<div class="footer-social mb-4">
+					<a href="#" aria-label="Facebook"><span class="icon-facebook"></span></a>
+					<a href="#" aria-label="Twitter"><span class="icon-twitter"></span></a>
+					<a href="https://www.instagram.com/mesasoftofficial?igsh=MW1hcDAwc3N2dDU4dw%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram"><span class="icon-instagram"></span></a>
+					<a href="https://www.linkedin.com/company/mesasoft/" aria-label="LinkedIn" target="_blank" rel="noopener"><span class="icon-linkedin"></span></a>
+				</div>
+			</div>
+			<div class="col-lg-2 mb-4 mb-lg-0">
+				<h2 class="footer-heading mb-3">Hızlı Menü</h2>
+				<ul class="list-unstyled pro-footer-menu">
+					<li><a href="about.html">Hakkımızda</a></li>
+					<li><a href="#services-section">Çözümlerimiz</a></li>
+					<li><a href="#blog-section">Blog</a></li>
+					<li><a href="contact.html">İletişim</a></li>
+				</ul>
+			</div>
+			<div class="col-lg-3 mb-4 mb-lg-0">
+				<h2 class="footer-heading mb-3">Ürünler</h2>
+				<ul class="list-unstyled pro-footer-menu">
+					<li><a href="#">WOLVOX ERP</a></li>
+					<li><a href="#">e-Dönüşüm</a></li>
+					<li><a href="#">Sektörel Çözümler</a></li>
+					<li><a href="#">Tüm Ürünler</a></li>
+				</ul>
+			</div>
+			<div class="col-lg-3">
+				<h2 class="footer-heading mb-3">İletişim</h2>
+				<ul class="list-unstyled pro-footer-contact">
+					<li class="mb-2"><span class="icon-map-marker mr-2"></span>Akros İstanbul, Barbaros Hayrettin Paşa, 1995. Sk. No:1-3 Kat:29 Daire No:472, 34522 Esenyurt/İstanbul</li>
+					<li class="mb-2"><span class="icon-phone mr-2"></span><a href="tel:+905414555837">0541 455 58 37</a></li>
+					<li class="mb-2"><span class="icon-envelope mr-2"></span><a href="mailto:info@mesasoft.com.tr">info@mesasoft.com.tr</a></li>
+				</ul>
+				<div class="mt-3 d-flex align-items-start"><span class="icon-clock-o mr-2"></span>
+					<div>
+						<div>Pazartesi-Cuma: 09:00–18:00</div>
+						<div>Cumartesi: 12:00–16:00</div>
+						<div>Pazar: <span style="color:#f87171;font-weight:600;">Kapalı</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row pt-4 mt-4 text-center">
+			<div class="col-md-12">
+				<div class="border-top pt-4" style="border-color:rgba(255,255,255,.15) !important;">
+					<p class="mb-0" style="color:#0a2342; letter-spacing:.01em; font-size:1.05rem; font-weight:600;">Copyright ©2025 Mesa Soft. Tüm Hakları Saklıdır.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<style>
+		.pro-footer {
+			background: linear-gradient(120deg, #e3ecfa 0%, #b5c9e8 100%);
+			color: #21325e;
+			padding-top: 48px;
+			padding-bottom: 24px;
+			font-size: 1.01rem;
+		}
+		.pro-footer .footer-heading {
+			color: #0a2342;
+			font-size: 1.08rem;
+			font-weight: 700;
+			margin-bottom: 1.1rem;
+			letter-spacing: .01em;
+		}
+		.pro-footer p, .pro-footer address, .pro-footer ul, .pro-footer li, .pro-footer a {
+			color: #21325e;
+			font-size: 1.01rem;
+			opacity: 0.97;
+		}
+		.pro-footer a:hover {
+			color: #0a2342;
+			text-decoration: underline;
+		}
+		.pro-footer .pro-footer-menu a {
+			color: #21325e;
+			transition: color .2s;
+		}
+		.pro-footer .pro-footer-menu a:hover {
+			color: #0a2342;
+		}
+		.pro-footer .pro-footer-contact a {
+			color: #21325e;
+			font-weight: 500;
+		}
+		.pro-footer .pro-footer-contact a:hover {
+			color: #0a2342;
+		}
+		.pro-footer .footer-social {
+			display: flex;
+			gap: 12px;
+			margin-top: 10px;
+		}
+		.pro-footer .footer-social a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 38px;
+			height: 38px;
+			border-radius: 50%;
+			background: #fff;
+			box-shadow: 0 2px 8px rgba(10,35,66,0.07);
+			color: #0a2342;
+			font-size: 1.3rem;
+			transition: background .2s, color .2s;
+		}
+		.pro-footer .footer-social a:hover {
+			background: #0a2342;
+			color: #fff;
+		}
+		.pro-footer .border-top {
+			border-top: 1px solid rgba(10,35,66,.12) !important;
+		}
+	</style>
+</footer>
+		</div>
+
+		</body>
