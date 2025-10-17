@@ -8,71 +8,7 @@
 
   <meta name="description" content="Mesa Soft, İstanbul Esenyurt AKINSOFT Yetkili Çözüm Ortağıdır. WOLVOX ERP, e-Dönüşüm ve sektörel yazılım çözümleriyle işletmenizi dijitalleştiriyoruz. Demo talep edin!" />
   <meta name="keywords" content="const express = require('express');
-  const sql = require('mssql');
-  const cors = require('cors');
-  
-  const app = express();
-  const port = 3000; // Sunucunun çalışacağı port
-  
-  // Gelen istekleri okuyabilmek için gerekli ara yazılımlar (middleware)
-  app.use(cors()); // Farklı kaynaklardan gelen isteklere izin ver
-  app.use(express.json()); // JSON formatındaki verileri işle
-  app.use(express.urlencoded({ extended: true })); // Form verilerini işle
-  
-  // --- VERİTABANI BİLGİLERİNİZİ BURAYA GİRİN ---
-  const dbConfig = {
-      user: 'veritabani_kullanici_adiniz',
-      password: 'veritabani_sifreniz',
-      server: 'localhost', // veya sunucu IP/adı
-      database: 'veritabani_adiniz',
-      options: {
-          encrypt: false, // Azure SQL için true yapın
-          trustServerCertificate: true // Lokal geliştirme için true yapın
-      }
-  };
-  // ---------------------------------------------
-  
-  // İletişim formu için API endpoint'i
-  app.post('/api/contact', async (req, res) => {
-      // Formdan gelen verileri al
-      const { fullname, company, email, phone, message } = req.body;
-  
-      // Ad ve Soyad'ı ayır
-      const nameParts = (fullname || '').split(' ');
-      const ad = nameParts[0] || null;
-      const soyad = nameParts.slice(1).join(' ') || null;
-  
-      // Gerekli alanları kontrol et
-      if (!ad || !email || !message) {
-          return res.status(400).json({ success: false, message: 'Lütfen tüm zorunlu alanları doldurun.' });
-      }
-  
-      try {
-          // Veritabanına bağlan
-          let pool = await sql.connect(dbConfig);
-  
-          // SQL Injection'a karşı korumalı sorgu
-          await pool.request()
-              .input('Ad', sql.NVarChar, ad)
-              .input('SoyAd', sql.NVarChar, soyad)
-              .input('Unvan', sql.NVarChar, company)
-              .input('Telefon', sql.NVarChar, phone) // Tablonuzdaki sütun adı 'Melefon'
-              .input('Mesaj', sql.NVarChar, message)
-              .input('Mail', sql.NVarChar, email) // E-posta için sütun eklediğinizi varsayıyoruz
-              .query('INSERT INTO Talepler (Ad, SoyAd, Unvan, Telefon, Mesaj, Mail) VALUES (@Ad, @SoyAd, @Unvan, @Telefon, @Mesaj, @Mail)');
-  
-          res.json({ success: true, message: 'Mesajınız başarıyla alındı. En kısa sürede size geri döneceğiz.' });
-  
-      } catch (err) {
-          console.error('Veritabanı Hatası:', err);
-          res.status(500).json({ success: false, message: 'Sunucu hatası oluştu. Lütfen daha sonra tekrar deneyin.' });
-      }
-  });
-  
-  // Sunucuyu başlat
-  app.listen(port, () => {
-      console.log(`Sunucu http://localhost:${port} adresinde çalışıyor`);
-  });
+ 
   , ERP, WOLVOX, Mesa Soft, Kurumsal Kaynak Planlama, yazılım, danışmanlık" />
 
   <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" rel="stylesheet">
@@ -278,7 +214,13 @@
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
-  <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+  <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner" style="background-color: rgba(255, 255, 255, 0.25); 
+               backdrop-filter: blur(5px); 
+               -webkit-backdrop-filter: blur(10px);
+               position: fixed;
+               width: 100%;
+               top: 0;
+               z-index: 999;">
   <div class="container">
     <div class="row align-items-center">
       
