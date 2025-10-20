@@ -605,8 +605,10 @@
           @media (max-width:1199px){ .ed-grid{ grid-template-columns:repeat(3,1fr); } }
           @media (max-width:767px){ .ed-grid{ grid-template-columns:repeat(2,1fr); } }
           @media (max-width:480px){ .ed-grid{ grid-template-columns:repeat(1,1fr); max-width:280px; } }
-          .ed-card { background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); border-radius:16px; height:230px; display:flex; align-items:center; justify-content:center; transition:transform .2s ease, box-shadow .2s ease, background .2s ease; }
+          .ed-card { background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); border-radius:16px; height:230px; display:flex; align-items:center; justify-content:center; transition:transform .2s ease, box-shadow .2s ease, background .2s ease; cursor:pointer; }
           .ed-card:hover { transform:translateY(-6px); box-shadow:0 16px 32px rgba(0,0,0,.25); background:rgba(255,255,255,.10); }
+          .ed-grid a { display:block; transition:transform .1s ease; }
+          .ed-grid a:hover { transform:scale(1.02); }
           .ed-icon { width:96px; height:96px; border-radius:14px; background:rgba(255,255,255,.12); display:flex; align-items:center; justify-content:center; box-shadow:inset 0 0 0 1px rgba(255,255,255,.18); }
           .ed-icon img { width:64px; height:64px; object-fit:cover; border-radius:10px; filter: contrast(1.05) saturate(1.05); }
           .ed-label { text-align:center; margin-top:18px; font-weight:800; letter-spacing:.02em; color:#fff; }
@@ -623,53 +625,67 @@
             </div>
             <div class="ed-grid" data-aos="fade-up" data-aos-delay="100">
               <div>
-                <div class="ed-card">
-                  <div class="ed-icon"><img src="https://www.istanbulakinsoft.net/wp-content/uploads/2023/05/efatura.webp" alt="E-Fatura"></div>
-                </div>
-                <div class="ed-dot"></div>
-                <div class="ed-label">E-FATURA</div>
+                <a href="e-fatura.html" style="text-decoration:none; color:inherit;">
+                  <div class="ed-card">
+                    <div class="ed-icon"><img src="https://www.istanbulakinsoft.net/wp-content/uploads/2023/05/efatura.webp" alt="E-Fatura"></div>
+                  </div>
+                  <div class="ed-dot"></div>
+                  <div class="ed-label">E-FATURA</div>
+                </a>
               </div>
               <div>
-                <div class="ed-card">
-                  <div class="ed-icon"><img src="https://www.istanbulakinsoft.net/wp-content/uploads/2023/05/arsiv.webp" alt="E-Arşiv"></div>
-                </div>
-                <div class="ed-dot"></div>
-                <div class="ed-label">E-ARŞİV</div>
+                <a href="e-arsiv.html" style="text-decoration:none; color:inherit;">
+                  <div class="ed-card">
+                    <div class="ed-icon"><img src="https://www.istanbulakinsoft.net/wp-content/uploads/2023/05/arsiv.webp" alt="E-Arşiv"></div>
+                  </div>
+                  <div class="ed-dot"></div>
+                  <div class="ed-label">E-ARŞİV</div>
+                </a>
               </div>
               <div>
-                <div class="ed-card">
-                  <div class="ed-icon"><img src="https://www.istanbulakinsoft.net/wp-content/uploads/2023/05/eirsaliye.webp" alt="E-İrsaliye"></div>
-                </div>
-                <div class="ed-dot"></div>
-                <div class="ed-label">E-İRSALİYE</div>
+                <a href="e-irsaliye.htm" style="text-decoration:none; color:inherit;">
+                  <div class="ed-card">
+                    <div class="ed-icon"><img src="https://www.istanbulakinsoft.net/wp-content/uploads/2023/05/eirsaliye.webp" alt="E-İrsaliye"></div>
+                  </div>
+                  <div class="ed-dot"></div>
+                  <div class="ed-label">E-İRSALİYE</div>
+                </a>
               </div>
               <div>
-                <div class="ed-card">
-                  <div class="ed-icon"><img src="https://www.istanbulakinsoft.net/wp-content/uploads/2023/05/edefter.webp" alt="E-Defter"></div>
-                </div>
-                <div class="ed-dot"></div>
-                <div class="ed-label">E-DEFTER</div>
+                <a href="e-defter.html" style="text-decoration:none; color:inherit;">
+                  <div class="ed-card">
+                    <div class="ed-icon"><img src="https://www.istanbulakinsoft.net/wp-content/uploads/2023/05/edefter.webp" alt="E-Defter"></div>
+                  </div>
+                  <div class="ed-dot"></div>
+                  <div class="ed-label">E-DEFTER</div>
+                </a>
               </div>
               <div>
-                <div class="ed-card">
-                  <div class="ed-icon"><img src="https://www.istanbulakinsoft.net/wp-content/uploads/2023/05/emustahsil.webp" alt="E-Mühtahsil"></div>
-                </div>
-                <div class="ed-dot"></div>
-                <div class="ed-label">E-MÜHTAHSİL</div>
+                <a href="e-mustahsil.html" style="text-decoration:none; color:inherit;">
+                  <div class="ed-card">
+                    <div class="ed-icon"><img src="https://www.istanbulakinsoft.net/wp-content/uploads/2023/05/emustahsil.webp" alt="E-Mühtahsil"></div>
+                  </div>
+                  <div class="ed-dot"></div>
+                  <div class="ed-label">E-MÜHTAHSİL</div>
+                </a>
               </div>
               <div>
-                <div class="ed-card">
-                  <div class="ed-icon"><img src="https://www.istanbulakinsoft.net/wp-content/uploads/2023/05/emutabakat.webp" alt="E-Mutabakat"></div>
-                </div>
-                <div class="ed-dot"></div>
-                <div class="ed-label">E-MUTABAKAT</div>
+                <a href="e-mutabakat.html" style="text-decoration:none; color:inherit;">
+                  <div class="ed-card">
+                    <div class="ed-icon"><img src="https://www.istanbulakinsoft.net/wp-content/uploads/2023/05/emutabakat.webp" alt="E-Mutabakat"></div>
+                  </div>
+                  <div class="ed-dot"></div>
+                  <div class="ed-label">E-MUTABAKAT</div>
+                </a>
               </div>
               <div>
-                <div class="ed-card">
-                  <div class="ed-icon"><img src="images/e-adisyon.webp" alt="E-Adisyon"></div>
-                </div>
-                <div class="ed-dot"></div>
-                <div class="ed-label">E-ADİSYON</div>
+                <a href="e-adisyon.html" style="text-decoration:none; color:inherit;">
+                  <div class="ed-card">
+                    <div class="ed-icon"><img src="images/e-adisyon.webp" alt="E-Adisyon"></div>
+                  </div>
+                  <div class="ed-dot"></div>
+                  <div class="ed-label">E-ADİSYON</div>
+                </a>
               </div>
             </div>
           </div>
