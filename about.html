@@ -55,8 +55,7 @@ body {
   </style>
 </head>
 <body>
-  <div class="site-wrap">
-    <div class="fixed-header">
+  <div class="fixed-header">
     <div class="top-bar py-2" id="home-section" style="background-color: #21325E !important;">
       <div class="container">
         <div class="row">
@@ -78,7 +77,12 @@ body {
       </div> 
     </div>
 
-  <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+  <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner" style="background-color: rgba(255, 255, 255, 0.25); 
+               backdrop-filter: blur(5px); 
+               -webkit-backdrop-filter: blur(10px);
+               width: 100%;
+               top: 0;
+               z-index: 999;">
   <div class="container">
     <div class="row align-items-center">
       
@@ -95,15 +99,39 @@ body {
       <!-- Menü Alanı -->
       <div class="col-12 col-md-9 d-none d-xl-block">
         <nav class="site-navigation position-relative text-right" role="navigation">
-          <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-            <li><a href="index.html#home-section" class="nav-link">Ana Sayfa</a></li>
-            <!-- <li><a href="index.html#services-section" class="nav-link">Hizmetlerimiz</a></li> -->
-            <li><a href="index.html#products-section" class="nav-link">Ürünlerimiz</a></li>
-            <li><a href="index.html#work-section" class="nav-link">E-Dönüşüm</a></li>
-            <li><a href="about.html" class="nav-link">Hakkımızda</a></li>
-            <li><a href="index.html#blog-section" class="nav-link">Blog</a></li>
-            <li><a href="contact.html" class="nav-link">İletişim</a></li>
-          </ul>
+           <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+             <li><a href="#home-section" class="nav-link">Ana Sayfa</a></li>
+             <!-- <li><a href="#services-section" class="nav-link">Hizmetlerimiz</a></li> -->
+             <li class="menu-item menu-item-has-children">
+               <a href="#products-section" class="nav-link">Ürünlerimiz</a>
+               <ul class="sub-menu">
+                 <li><a href="wolvox-erp.html">Wolvox ERP</a></li>
+                 <li><a href="restoran-cafe-bar.html">Restoran</a></li>
+                 <li><a href="hizli-satis.html">Wolvox Hızlı Satış</a></li>
+                 <li><a href="wolvox-crm.html">Wolvox CRM</a></li>
+                 <li><a href="akinsoft-servis-programi.html">Wolvox Servis</a></li>
+                 <li><a href="genel-muhasebe.html">Wolvox Genel Muhasebe</a></li>
+                 <li><a href="otel-yonetimi.html">Otel Yönetimi</a></li>
+                 <li><a href="otopark-cozumleri.html">Otopark Çözümleri</a></li>
+                 <li><a href="arac-satis-kiralama.html">Araç Satış</a></li>
+               </ul>
+             </li>
+             <li class="menu-item menu-item-has-children">
+               <a href="javascript:void(0)" class="nav-link">Online İşlemler</a>
+               <ul class="sub-menu">
+                 <li><a href="https://musteri.akinsoft.net/tr/login?returnUrl=%2F" target="_blank">Akınsoft Müşteri Girişi</a></li>
+                 <li><a href="https://bayi.akinsoft.net/" target="_blank">Akınsoft Bayi Girişi</a></li>
+                 <li><a href="https://bilgibankasi.akinsoft.net/" target="_blank">Akınsoft Bilgi Bankası</a></li>
+                 <li><a href="https://www.youtube.com/user/AKINSOFTEgitim/" target="_blank">Akınsoft Eğitim Videoları</a></li>
+                 <!-- <li><a href="https://www.istanbulakinsoft.net/indirmeler/" target="_blank">İndirmeler</a></li> -->
+                 <li><a href="fiyatlandirma.html">Fiyatlandırma</a></li>
+               </ul>
+             </li>
+             <li><a href="#work-section" class="nav-link">E-Dönüşüm</a></li>
+             <li><a href="about.html" class="nav-link">Hakkımızda</a></li>
+             <li><a href="#blog-section" class="nav-link">Blog</a></li>
+             <li><a href="contact.html" class="nav-link">İletişim</a></li>
+           </ul>
         </nav>
       </div>
 
@@ -118,6 +146,7 @@ body {
   </div>
 </header>
 </div>
+<div class="site-wrap">
     <section class="hero-about py-5">
       <div class="container">
         <div class="row align-items-center">
@@ -247,7 +276,7 @@ body {
               <ul class="list-unstyled pro-footer-contact">
                 <li class="mb-2"><span class="icon-map-marker mr-2"></span>Akros İstanbul, Barbaros Hayrettin Paşa, 1995. Sk. No:1-3 Kat:29 Daire No:472, 34522 Esenyurt/İstanbul</li>
                 <li class="mb-2"><span class="icon-phone mr-2"></span><a href="tel:+905414555837">0541 455 58 37</a></li>
-                <li class="mb-2"><span class="icon-envelope mr-2"></span><a href="mailto:info@mesasoft.com.tr">info@mesasoft.com.tr</a></li>
+                <li class="mb-2"><span class="icon-envelope mr-2"></span><a href="mailto:mesasofterp@hotmail.com">mesasofterp@hotmail.com</a></li>
               </ul>
               <div class="mt-3 d-flex align-items-start"><span class="icon-clock-o mr-2"></span>
                 <div>
@@ -331,70 +360,7 @@ body {
           }
         </style>
       </footer>
-        <style>
-          .pro-footer {
-            background: linear-gradient(120deg, #e3ecfa 0%, #b5c9e8 100%);
-            color: #21325e;
-            padding-top: 48px;
-            padding-bottom: 24px;
-            font-size: 1.01rem;
-          }
-          .pro-footer .footer-heading {
-            color: #0a2342;
-            font-size: 1.08rem;
-            font-weight: 700;
-            margin-bottom: 1.1rem;
-            letter-spacing: .01em;
-          }
-          .pro-footer p, .pro-footer address, .pro-footer ul, .pro-footer li, .pro-footer a {
-            color: #21325e;
-            font-size: 1.01rem;
-            opacity: 0.97;
-          }
-          .pro-footer a:hover {
-            color: #0a2342;
-            text-decoration: underline;
-          }
-          .pro-footer .pro-footer-menu a {
-            color: #21325e;
-            transition: color .2s;
-          }
-          .pro-footer .pro-footer-menu a:hover {
-            color: #0a2342;
-          }
-          .pro-footer .pro-footer-contact a {
-            color: #21325e;
-            font-weight: 500;
-          }
-          .pro-footer .pro-footer-contact a:hover {
-            color: #0a2342;
-          }
-          .pro-footer .footer-social {
-            display: flex;
-            gap: 12px;
-            margin-top: 10px;
-          }
-          .pro-footer .footer-social a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: #fff;
-            box-shadow: 0 2px 8px rgba(10,35,66,0.07);
-            color: #0a2342;
-            font-size: 1.3rem;
-            transition: background .2s, color .2s;
-          }
-          .pro-footer .footer-social a:hover {
-            background: #0a2342;
-            color: #fff;
-          }
-          .pro-footer .border-top {
-            border-top: 1px solid rgba(10,35,66,.12) !important;
-          }
-        </style>
+  </div>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
   <script src="js/popper.min.js"></script>
