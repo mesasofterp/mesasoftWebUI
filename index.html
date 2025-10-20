@@ -1,5 +1,19 @@
 <!doctype html>
 <html lang="tr">
+  <style>
+.particlehead {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px; /* header yüksekliği kadar */
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+</style>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,138 +38,7 @@
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .site-navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    }
-    body {
-      padding-top: 0;
-    }
-     .site-navbar .main-menu .nav-link:hover,
-     .site-navbar .main-menu .nav-link:focus {
-       color: #649DD1 !important;
-     }
-     
-     /* Dropdown Menü Stilleri */
-     .menu-item-has-children {
-       position: relative;
-     }
-     
-     .menu-item-has-children      .sub-menu {
-       position: absolute;
-       top: 100%;
-       left: 0;
-       min-width: 250px;
-       background: #fff;
-       border-radius: 8px;
-       box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-       opacity: 0;
-       visibility: hidden;
-       transform: translateY(-10px);
-       transition: all 0.3s ease;
-       z-index: 1000;
-       padding: 12px 0;
-       margin-top: 8px;
-       text-align: left;
-     }
-     
-     .menu-item-has-children:hover .sub-menu {
-       opacity: 1;
-       visibility: visible;
-       transform: translateY(0);
-     }
-     
-     .sub-menu li {
-       list-style: none;
-       margin: 0;
-       padding: 0;
-       text-align: left;
-     }
-     
-     .sub-menu a {
-       display: block;
-       padding: 10px 20px;
-       color: #333;
-       text-decoration: none;
-       font-size: 14px;
-       font-weight: 500;
-       transition: all 0.2s ease;
-       border-left: 3px solid transparent;
-       text-align: left;
-     }
-     
-     .sub-menu a:hover {
-       background-color: #f8f9fa;
-       color: #649DD1;
-       border-left-color: #649DD1;
-       padding-left: 25px;
-     }
-     
-     /* Ana menü linki için ok işareti */
-     .menu-item-has-children > a::after {
-       content: "▼";
-       font-size: 10px;
-       margin-left: 5px;
-       transition: transform 0.3s ease;
-     }
-     
-     .menu-item-has-children:hover > a::after {
-       transform: rotate(180deg);
-     }
-     
-     /* Online İşlemler için özel stil */
-     .menu-item-has-children > a[href="javascript:void(0)"] {
-       cursor: pointer;
-     }
-    /* Ürünlerimiz kart arka yüzü için özel stil */
-    .product-back {
-      background: #0a2342 !important;
-      color: #fff !important;
-      border-radius: 16px;
-      padding: 24px 18px 18px 18px;
-      min-height: 260px;
-      max-height: 340px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      box-sizing: border-box;
-    }
-    .product-back h3,
-    .product-back p,
-    .product-back a {
-      color: #fff !important;
-      word-break: break-word;
-      white-space: normal;
-      margin-bottom: 0.7rem;
-      max-width: 100%;
-    }
-    .product-back p {
-      font-size: 1rem;
-      line-height: 1.4;
-      margin-bottom: 1rem;
-      overflow-wrap: break-word;
-      word-break: break-word;
-      white-space: normal;
-    }
-    .product-back a.product-more {
-      color: #fff !important;
-      text-decoration: underline;
-      font-weight: 600;
-      margin-top: auto;
-      align-self: flex-end;
-      font-size: 1rem;
-    }
-    .product-back * {
-      box-sizing: border-box;
-    }
-  </style>
+
   <title>Mesa Soft | AKINSOFT İstanbul Bölge Bayisi</title>
   <script type="application/ld+json">
   {
@@ -243,15 +126,15 @@
              <li class="menu-item menu-item-has-children">
                <a href="#products-section" class="nav-link">Ürünlerimiz</a>
                <ul class="sub-menu">
-                 <li><a href="wolvox-erp.html">Ön Muhasebe – ERP</a></li>
-                 <li><a href="restoran-yonetimi.html">Restoran Yönetimi</a></li>
-                 <li><a href="#work-section">E-Dönüşüm</a></li>
-                 <li><a href="#">E-Ticaret</a></li>
-                 <li><a href="hizli-satis.html">Hızlı Satış</a></li>
-                 <li><a href="#">Otel Yönetimi</a></li>
-                 <li><a href="genel-muhasebe.html">Genel Muhasebe</a></li>
-                 <li><a href="#">Servis Yönetimi</a></li>
-                 <li><a href="#">CafePlus</a></li>
+                 <li><a href="wolvox-erp.html">Wolvox ERP</a></li>
+                 <li><a href="restoran-cafe-bar.html">Restoran</a></li>
+                 <li><a href="hizli-satis.html">Wolvox Hızlı Satış</a></li>
+                 <li><a href="wolvox-crm.html">Wolvox CRM</a></li>
+                 <li><a href="akinsoft-servis-programi.html">Wolvox Servis</a></li>
+                 <li><a href="genel-muhasebe.html">Wolvox Genel Muhasebe</a></li>
+                 <li><a href="otel-yonetimi.html">Otel Yönetimi</a></li>
+                 <li><a href="otopark-cozumleri.html">Otopark Çözümleri</a></li>
+                 <li><a href="arac-satis-kiralama.html">Araç Satış</a></li>
                </ul>
              </li>
              <li class="menu-item menu-item-has-children">
@@ -285,7 +168,14 @@
 </header>
 
 
-    <div class="particlehead"></div>
+    <div class="particlehead" style="
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 800px;
+"></div>
       <div class="site-blocks-cover">
         <div class="container">
           <div class="row align-items-center justify-content-center site-blocks-cover-row">
@@ -743,7 +633,7 @@
               <h2 class="footer-heading mb-3">Ürünler</h2>
               <ul class="list-unstyled pro-footer-menu">
                 <li><a href="wolvox-erp.html">Ön Muhasebe – ERP</a></li>
-                <li><a href="restoran-yonetimi.html">Restoran Yönetimi</a></li>
+                <li><a href="restoran-cafe-bar.html">Restoran Yönetimi</a></li>
                 <li><a href="#work-section">E-Dönüşüm</a></li>
                 <li><a href="hizli-satis.html">Hızlı Satış</a></li>
                 <li><a href="genel-muhasebe.html">Genel Muhasebe</a></li>

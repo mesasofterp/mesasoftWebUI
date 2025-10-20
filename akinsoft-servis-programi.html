@@ -9,6 +9,20 @@
 	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/style.css">
 	<style>
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+body {
+  padding-top: 89px !important;
+}
+
+</style>
+	<style>
 		html, body {
 			height: 100%;
 			margin: 0;
@@ -23,44 +37,8 @@
 			flex-direction: column;
 			background: transparent;
 		}
-		.top-bar {
-			background: linear-gradient(90deg, #21325E 0%, #3A7BD5 100%) !important;
-			color: #fff;
-			box-shadow: 0 2px 12px rgba(33,50,94,0.08);
-			position: fixed;
-			width: 100vw;
-			top: 0;
-			left: 0;
-			z-index: 1030;
-		}
-		.site-navbar {
-			background: #fff !important;
-			box-shadow: 0 2px 16px rgba(33,50,94,0.10);
-			border-radius: 0 0 18px 18px;
-			margin-bottom: 0;
-			padding-bottom: 0;
-			position: fixed;
-			width: 100vw;
-			top: 48px;
-			left: 0;
-			z-index: 1020;
-		}
-		.site-navbar .site-menu .nav-link {
-			color: #21325E !important;
-			font-weight: 500;
-			font-size: 1.08rem;
-			transition: color 0.2s;
-			border-radius: 8px;
-			padding: 8px 18px;
-		}
-		.site-navbar .site-menu .nav-link:hover {
-			background: linear-gradient(90deg, #3A7BD5 0%, #6dd5fa 100%);
-			color: #fff !important;
-		}
-		.site-logo img {
-			filter: drop-shadow(0 2px 8px rgba(33,50,94,0.10));
-			max-height: 48px;
-		}
+
+
 		.main-content {
 			margin-top: 0;
 		}
@@ -172,63 +150,99 @@
 		</style>
 </head>
 <body>
+  <div class="fixed-header">
+    <div class="top-bar py-2" id="home-section" style="background-color: #21325E !important;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-lg-right order-lg-2">
+            <ul class="social-media m-0 p-0">
+              <li><a href="#" class="p-2"><span class="icon-facebook"></span></a></li>
+              <li><a href="#" class="p-2"><span class="icon-twitter"></span></a></li>
+              <li><a href="#" class="p-2"><span class="icon-instagram"></span></a></li>
+              <li><a href="#" class="p-2"><span class="icon-linkedin"></span></a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 text-center text-lg-left order-lg-1">
+            <p class="mb-0 d-inline-flex">
+              <span class="mr-3"><a href="tel:+905414555837" class="d-flex align-items-center"><span class="icon-phone mr-2"></span><span>+90 541 455 58 37</span></a></span>
+              <span><a href="mailto:info@mesasoft.com.tr" class="d-flex align-items-center"><span class="icon-envelope mr-2"></span><span>info@mesasoft.com.tr</span></a></span>
+            </p>
+          </div>
+        </div>
+      </div> 
+    </div>
 
+  <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner" style="background-color: rgba(255, 255, 255, 0.25); 
+               backdrop-filter: blur(5px); 
+               -webkit-backdrop-filter: blur(10px);
+               width: 100%;
+               top: 0;
+               z-index: 999;">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Logo Alanı -->
+      <div class="col-12 col-xl-3 text-center">
+        <div class="site-logo">
+          <a href="index.html" class="d-flex align-items-center justify-content-center">
+            <img src="images/logo/akinlogo.png" alt="AKINSOFT Logo" class="logo-img" style="max-width:120px;width:100%;height:auto;">
+            <img src="images/logo/mesalogo.png" alt="Mesa Soft Logo" class="logo-img" style="max-width:120px;width:100%;height:auto;">
+          </a>
+        </div>
+      </div>
+
+      <!-- Menü Alanı -->
+      <div class="col-12 col-md-9 d-none d-xl-block">
+        <nav class="site-navigation position-relative text-right" role="navigation">
+           <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+             <li><a href="#home-section" class="nav-link">Ana Sayfa</a></li>
+             <!-- <li><a href="#services-section" class="nav-link">Hizmetlerimiz</a></li> -->
+             <li class="menu-item menu-item-has-children">
+               <a href="#products-section" class="nav-link">Ürünlerimiz</a>
+               <ul class="sub-menu">
+                 <li><a href="wolvox-erp.html">Wolvox ERP</a></li>
+                 <li><a href="restoran-cafe-bar.html">Restoran</a></li>
+                 <li><a href="hizli-satis.html">Wolvox Hızlı Satış</a></li>
+                 <li><a href="wolvox-crm.html">Wolvox CRM</a></li>
+                 <li><a href="akinsoft-servis-programi.html">Wolvox Servis</a></li>
+                 <li><a href="genel-muhasebe.html">Wolvox Genel Muhasebe</a></li>
+                 <li><a href="otel-yonetimi.html">Otel Yönetimi</a></li>
+                 <li><a href="otopark-cozumleri.html">Otopark Çözümleri</a></li>
+                 <li><a href="arac-satis-kiralama.html">Araç Satış</a></li>
+               </ul>
+             </li>
+             <li class="menu-item menu-item-has-children">
+               <a href="javascript:void(0)" class="nav-link">Online İşlemler</a>
+               <ul class="sub-menu">
+                 <li><a href="https://musteri.akinsoft.net/tr/login?returnUrl=%2F" target="_blank">Akınsoft Müşteri Girişi</a></li>
+                 <li><a href="https://bayi.akinsoft.net/" target="_blank">Akınsoft Bayi Girişi</a></li>
+                 <li><a href="https://bilgibankasi.akinsoft.net/" target="_blank">Akınsoft Bilgi Bankası</a></li>
+                 <li><a href="https://www.youtube.com/user/AKINSOFTEgitim/" target="_blank">Akınsoft Eğitim Videoları</a></li>
+                 <!-- <li><a href="https://www.istanbulakinsoft.net/indirmeler/" target="_blank">İndirmeler</a></li> -->
+                 <li><a href="fiyatlandirma.html">Fiyatlandırma</a></li>
+               </ul>
+             </li>
+             <li><a href="#work-section" class="nav-link">E-Dönüşüm</a></li>
+             <li><a href="about.html" class="nav-link">Hakkımızda</a></li>
+             <li><a href="#blog-section" class="nav-link">Blog</a></li>
+             <li><a href="contact.html" class="nav-link">İletişim</a></li>
+           </ul>
+        </nav>
+      </div>
+
+      <!-- Mobil Menü Butonu -->
+      <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
+        <a href="#" class="site-menu-toggle js-menu-toggle text-black">
+          <span class="icon-menu h3"></span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</header>
+</div>
 			<div class="site-wrap">
-		<div class="top-bar py-2" id="home-section" style="background-color: #21325E !important;">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 text-center text-lg-right order-lg-2">
-						<ul class="social-media m-0 p-0">
-							<li><a href="#" class="p-2"><span class="icon-facebook"></span></a></li>
-							<li><a href="https://www.youtube.com/@akinsoft" class="p-2"><span class="icon-youtube"></span></a></li>
-							<li><a href="https://www.instagram.com/mesasoftofficial?igsh=MW1hcDAwc3N2dDU4dw%3D%3D&utm_source=qr " class="p-2"><span class="icon-instagram"></span></a></li>
-							<li><a href="https://www.linkedin.com/company/mesasoft/" class="p-2" target="_blank" rel="noopener"><span class="icon-linkedin"></span></a></li>
-						</ul>
-					</div>
-					<div class="col-md-6 text-center text-lg-left order-lg-1">
-						<p class="mb-0 d-inline-flex">
-							<span class="mr-3"><a href="tel:+902129631990" class="d-flex align-items-center"><span class="icon-phone mr-2"></span><span>+90 212 963 19 90</span></a></span>
-							<span class="mr-3"><a href="tel:+905414555837" class="d-flex align-items-center"><span class="icon-phone mr-2"></span><span>+90 541 455 58 37</span></a></span>
-							<span><a href="mailto:info@mesasoft.com.tr" class="d-flex align-items-center"><span class="icon-envelope mr-2"></span><span>info@mesasoft.com.tr</span></a></span>
-						</p>
-					</div>
-				</div>
-			</div> 
-		</div>
 
-				<header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner" style="top: 48px;">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-12 col-xl-3 text-center">
-						<div class="site-logo">
-							<a href="index.html" class="d-flex align-items-center justify-content-center">
-								<img src="images/logo/akinlogo.png" alt="AKINSOFT Logo" class="logo-img">
-								<img src="images/logo/mesalogo.png" alt="Mesa Soft Logo" class="logo-img">
-							</a>
-						</div>
-					</div>
-					<div class="col-12 col-md-9 d-none d-xl-block">
-						<nav class="site-navigation position-relative text-right" role="navigation">
-							<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-								<li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
-								<li><a href="index.html#services-section" class="nav-link">Hizmetlerimiz</a></li>
-								<li><a href="index.html#products-section" class="nav-link">Ürünlerimiz</a></li>
-								<li><a href="index.html#about-section" class="nav-link">Hakkımızda</a></li>
-								<li><a href="index.html#work-section" class="nav-link">Sektörel Çözümler</a></li>
-								<li><a href="index.html#blog-section" class="nav-link">Blog</a></li>
-								<li class="active"><a href="contact.html" class="nav-link">İletişim</a></li>
-							</ul>
-						</nav>
-					</div>
-					<div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
-						<a href="#" class="site-menu-toggle js-menu-toggle text-black">
-							<span class="icon-menu h3"></span>
-						</a>
-					</div>
-				</div>
-			</div>
-
-		</header>
 
 		<div class="main-content" style="margin-top:0;">
 			<section id="main-product-section" style="width:100vw; min-height:60vh; background:#fff; margin-bottom:0; padding-bottom:0; display:grid; grid-template-columns:3fr 1fr; gap:0; align-items:stretch;">
