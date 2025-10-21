@@ -115,6 +115,15 @@
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
   <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner" style="background-color: rgba(255, 255, 255, 0.25); 
                backdrop-filter: blur(5px); 
                -webkit-backdrop-filter: blur(10px);
@@ -198,12 +207,16 @@
 
 
     <div class="particlehead" style="
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
   background-image: url('');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 800px;
 "></div>
       <div class="site-blocks-cover">
         <div class="container">
@@ -214,9 +227,15 @@
         </div>
       </div>  
       <div class="site-blocks-cover" style="position: relative; overflow: hidden;">
-        <div class="video-background-container">
+        <!-- <div class="video-background-container">
            <iframe src="https://www.youtube.com/embed/oUqTi9e-AQ0?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&modestbranding=1&playlist=oUqTi9e-AQ0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+        </div> -->
+<div class="video-background-container">
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="videos/background.mp4" type="video/mp4">
+    Tarayıcınız video etiketini desteklemiyor.
+  </video>
+</div>
         <div class="container" style="position: relative; z-index: 2;">
           <div class="row align-items-center justify-content-center site-blocks-cover-row">
             <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 text-container-video-bg" data-aos="fade-right" data-aos-delay="400">
