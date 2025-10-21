@@ -44,24 +44,32 @@ Background.headparticle = function() {
    });
 
    // model
-   var loader = new THREE.OBJLoader( manager );
-   loader.load( 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/40480/head.obj', function ( object ) {
+var loader = new THREE.OBJLoader(manager);
 
-      object.traverse( function ( child ) {
-         if ( child instanceof THREE.Mesh ) {
+loader.load('js/head.obj', function(object) {
 
+    object.traverse(function(child) {
+        if (child instanceof THREE.Mesh) {
+
+            // Texture kullanmak istersen burayı açabilirsin
             // child.material.map = texture;
 
             var scale = 8;
 
-            $(child.geometry.vertices).each(function() {
-               p_geom.vertices.push(new THREE.Vector3(this.x * scale, this.y * scale, this.z * scale));
-            })
-         }
-      });
+            // Vertices’i p_geom’e ekle
+            child.geometry.vertices.forEach(function(v) {
+                p_geom.vertices.push(new THREE.Vector3(v.x * scale, v.y * scale, v.z * scale));
+            });
+        }
+    });
 
-      Background.scene.add(p)
-   });
+    // Sahneye ekle
+    Background.scene.add(p);
+
+}, undefined, function(error) {
+    console.error('OBJ yüklenirken hata oluştu:', error);
+});
+
 
    p = new THREE.ParticleSystem(
       p_geom,
