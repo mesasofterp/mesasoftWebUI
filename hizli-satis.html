@@ -151,6 +151,201 @@ body {
 				top: 56px;
 			}
 		}
+		
+		/* Mobil optimizasyonları */
+		@media (max-width: 768px) {
+			body {
+				padding-top: 100px !important;
+			}
+			
+			#main-product-section {
+				grid-template-columns: 1fr !important;
+				gap: 0 !important;
+				padding: 0 !important;
+			}
+			
+			#main-product-section > div:first-child {
+				padding: 40px 20px 20px 20px !important;
+				min-height: auto !important;
+			}
+			
+			#main-product-section h1 {
+				font-size: 1.8rem !important;
+				margin-bottom: 12px !important;
+			}
+			
+			#main-product-section p {
+				font-size: 1rem !important;
+				margin-bottom: 15px !important;
+			}
+			
+			iframe {
+				width: 100% !important;
+				height: 200px !important;
+				max-width: 100% !important;
+			}
+			
+			.modern-demo-btn {
+				padding: 14px 30px !important;
+				font-size: 1rem !important;
+			}
+			
+			.modern-features-box {
+				max-width: 100% !important;
+				margin: 0 !important;
+				border-radius: 0 !important;
+				padding: 20px 15px !important;
+			}
+			
+			.modern-features-title {
+				font-size: 1.3rem !important;
+				margin-bottom: 15px !important;
+			}
+			
+			.modern-features-list {
+				gap: 15px !important;
+			}
+			
+			.modern-features-list li {
+				padding: 12px 10px !important;
+			}
+			
+			.modern-feature-text {
+				font-size: 1rem !important;
+			}
+			
+			.modern-feature-icon {
+				font-size: 1.8rem !important;
+				padding: 8px !important;
+			}
+		}
+		
+		@media (max-width: 480px) {
+			#main-product-section h1 {
+				font-size: 1.6rem !important;
+			}
+			
+			#main-product-section p {
+				font-size: 0.95rem !important;
+			}
+			
+			iframe {
+				height: 180px !important;
+			}
+			
+			.modern-demo-btn {
+				padding: 12px 25px !important;
+				font-size: 0.95rem !important;
+			}
+			
+			.modern-features-title {
+				font-size: 1.2rem !important;
+			}
+			
+			.modern-feature-text {
+				font-size: 0.95rem !important;
+			}
+			
+			.modern-feature-icon {
+				font-size: 1.6rem !important;
+			}
+		}
+		
+		/* Alt bölümler için mobil optimizasyonları */
+		@media (max-width: 768px) {
+			#ozel-section {
+				flex-direction: column !important;
+				padding: 20px 15px !important;
+				border-radius: 0 !important;
+			}
+			
+			#ozel-section > div:first-child {
+				flex: none !important;
+				padding: 0 !important;
+				margin-bottom: 20px !important;
+			}
+			
+			#ozel-section h2 {
+				font-size: 1.6rem !important;
+				margin-bottom: 12px !important;
+			}
+			
+			#ozel-section p {
+				font-size: 1rem !important;
+				margin-bottom: 12px !important;
+			}
+			
+			#ozel-section ul {
+				font-size: 0.95rem !important;
+				margin-bottom: 12px !important;
+			}
+			
+			#ozel-section > div:last-child {
+				flex: none !important;
+				padding: 0 !important;
+				min-height: auto !important;
+			}
+			
+			#ozel-section img {
+				width: 100% !important;
+				height: 250px !important;
+				min-height: 250px !important;
+				max-width: 100% !important;
+				object-fit: cover !important;
+			}
+			
+			.scroll-bar-container {
+				padding: 12px 0 !important;
+			}
+			
+			.scroll-bar {
+				height: 40px !important;
+				padding: 6px 0 !important;
+			}
+			
+			.animated-btn {
+				min-width: 90px !important;
+				font-size: 0.8rem !important;
+				padding: 3px 6px !important;
+			}
+			
+			.animated-btn span {
+				font-size: 0.8rem !important;
+			}
+		}
+		
+		@media (max-width: 480px) {
+			#ozel-section {
+				padding: 15px 10px !important;
+			}
+			
+			#ozel-section h2 {
+				font-size: 1.4rem !important;
+			}
+			
+			#ozel-section p {
+				font-size: 0.9rem !important;
+			}
+			
+			#ozel-section ul {
+				font-size: 0.85rem !important;
+			}
+			
+			#ozel-section img {
+				height: 200px !important;
+				min-height: 200px !important;
+			}
+			
+			.animated-btn {
+				min-width: 80px !important;
+				font-size: 0.75rem !important;
+				padding: 2px 4px !important;
+			}
+			
+			.animated-btn span {
+				font-size: 0.75rem !important;
+			}
+		}
 		.program-list li.animated-btn {
 			background: #fff;
 			margin-bottom: 20px;
@@ -400,5 +595,26 @@ body {
 </script>
   <script src="footer-component.js"></script>
 		</div>
-
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jarallax.min.js"></script>
+    <script src="js/jarallax-element.min.js"></script>
+    <script src="js/lozad.min.js"></script>
+    <script src="js/modernizr.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/OBJLoader.js"></script>
+    <script src="js/ParticleHead.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/main.js"></script>
 		</body>

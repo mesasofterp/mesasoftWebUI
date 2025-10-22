@@ -588,7 +588,7 @@ h1, h2, h3, h4, h5,
   width: 300px;
   position: fixed;
   right: 0;
-  z-index: 2000;
+  z-index: 2001;
   padding-top: 20px;
   background: #fff;
   height: calc(100vh);
