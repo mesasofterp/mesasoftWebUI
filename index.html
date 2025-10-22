@@ -109,6 +109,32 @@
     .text-container-video-bg .typed-words {
       color: #fff !important;
     }
+
+    @media (max-width: 767.98px) {
+      .site-blocks-cover, .site-blocks-cover > .container > .row {
+        height: auto;
+        min-height: 0;
+      }
+      .site-blocks-cover {
+        padding-top: 120px; /* Add some padding to the top on mobile */
+        padding-bottom: 40px;
+      }
+      .site-blocks-cover-row .col-md-12 {
+        margin-bottom: 2rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      #demo-form {
+        padding: 1.5rem 1rem !important;
+      }
+      #demo-form h2 {
+        font-size: 1.1rem;
+      }
+      #demo-form p {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 
@@ -138,7 +164,7 @@
           </div>
         </div>
       </div>  
-      <div class="site-blocks-cover" style="position: relative; overflow: hidden;">
+      <div class="site-blocks-cover" style="position: relative;">
         <!-- <div class="video-background-container">
            <iframe src="https://www.youtube.com/embed/oUqTi9e-AQ0?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&modestbranding=1&playlist=oUqTi9e-AQ0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div> -->
