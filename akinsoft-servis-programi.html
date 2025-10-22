@@ -142,14 +142,78 @@ body {
 				color: #fff;
 			}
 		</style>
+<style>
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px !important; /* Adjust for smaller header */
+  }
+
+  h1 {
+    font-size: 1.8rem !important;
+  }
+
+  #main-product-section {
+    grid-template-columns: 1fr !important; /* Stack columns */
+    min-height: unset !important;
+  }
+
+  #main-product-section > div:first-child {
+    padding: 32px 0 0 0 !important;
+    min-height: unset !important;
+  }
+
+  iframe {
+    height: 250px !important; /* Adjust video height */
+  }
+
+  .modern-demo-btn {
+    padding: 14px 32px !important;
+    font-size: 1rem !important;
+  }
+
+  .modern-demo-btn .icon-paper-plane {
+    font-size: 1.1rem !important;
+  }
+
+  .modern-features-box {
+    max-width: 100% !important;
+    border-radius: 0 !important;
+  }
+
+  #ozel-section {
+    flex-direction: column !important;
+  }
+
+  #ozel-section > div {
+    padding: 24px 16px !important;
+  }
+
+  #ozel-section h2 {
+    font-size: 1.5rem !important;
+  }
+
+  #ozel-section img {
+    min-height: 250px !important;
+    height: auto !important;
+    animation: none !important; /* Disable animation on mobile */
+  }
+
+  .animated-divider {
+    display: none; /* Hide complex divider on mobile */
+  }
+
+  .scroll-bar-container .animated-btn {
+    min-width: 90px !important;
+    font-size: 0.85rem !important;
+  }
+}
+</style>
 </head>
 <body>
 
   <script src="header-component.js"></script>
 
 			<div class="site-wrap">
-
-
 		<div class="main-content" style="margin-top:0;">
 			<section id="main-product-section" style="width:100vw; min-height:60vh; background:#fff; margin-bottom:0; padding-bottom:0; display:grid; grid-template-columns:3fr 1fr; gap:0; align-items:stretch;">
 				<div style="display:flex; flex-direction:column; align-items:center; justify-content:flex-start; background:linear-gradient(135deg,#f8fafd 0%,#eaf0fa 100%); padding:72px 0 0 0; width:100%; min-height:700px;">
@@ -397,5 +461,30 @@ body {
 <script src="footer-component.js"></script>
 
 		</div>
+<!-- scripts.html -->
+<!-- scripts.html -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jarallax.min.js"></script>
+<script src="js/jarallax-element.min.js"></script>
+<script src="js/lozad.min.js"></script>
+<script src="js/modernizr.min.js"></script>
+<script src="js/three.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/OBJLoader.js"></script>
+<script src="js/ParticleHead.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/typed.js"></script>
+<script src="js/main.js"></script>
+
 
 		</body>

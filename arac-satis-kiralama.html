@@ -149,13 +149,17 @@ body {
 
 
 		<div class="main-content" style="margin-top:0;">
-			<section id="main-product-section" style="width:100vw; min-height:60vh; background:#fff; margin-bottom:0; padding-bottom:0; display:grid; grid-template-columns:3fr 1fr; gap:0; align-items:stretch;">
-				<div style="display:flex; flex-direction:column; align-items:center; justify-content:flex-start; background:linear-gradient(135deg,#f8fafd 0%,#eaf0fa 100%); padding:72px 0 0 0; width:100%; min-height:700px;">
+			<section id="main-product-section" class="container-fluid" style="background:#fff; margin-bottom:0; padding-bottom:0;">
+				<div class="row">
+					<!-- Main Content Column -->
+					<div class="col-lg-8" style="display:flex; flex-direction:column; align-items:center; justify-content:flex-start; background:linear-gradient(135deg,#f8fafd 0%,#eaf0fa 100%); padding:72px 0 0 0; min-height:700px;">
 						<div style="width:92%; max-width:700px; margin-bottom:24px; text-align:center;">
 							<img src="images/logo/akinlogo.png" alt="NetGaleri & RentAgent" style="height:56px; margin-bottom:18px; filter:drop-shadow(0 2px 8px rgba(33,50,94,0.10));">
 							<h1 style="color:#21325E; font-size:2.1rem; font-weight:700; margin-bottom:18px;">NetGaleri & RentAgent</h1>
 							<p style="font-size:1.15rem; color:#3A7BD5; margin-bottom:18px; font-weight:500;">Araç satış ve kiralama süreçlerinizi dijitalleştirin! Galeriler, bayiler ve kiralama firmaları için özel çözümler.</p>
-							<iframe src="https://www.youtube.com/embed/OpGXBXWNNII" title="NetGaleri & RentAgent Tanıtım Videosu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:92%; max-width:700px; height:340px; border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.08); background:#000;"></iframe>
+							<div class="embed-responsive embed-responsive-16by9" style="border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.08); background:#000; max-width:700px; margin:auto;">
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OpGXBXWNNII" title="NetGaleri & RentAgent Tanıtım Videosu" allowfullscreen></iframe>
+							</div>
 							<div style="width:100%; text-align:center; margin-top:28px;">
 								<a href="contact.html" class="modern-demo-btn" style="display:inline-block; background:linear-gradient(90deg,#21325E 0%,#3A7BD5 100%); color:#fff; font-weight:bold; padding:18px 54px; border-radius:16px; font-size:1.18rem; text-decoration:none; box-shadow:0 4px 16px rgba(33,50,94,0.13); transition:background 0.2s, transform 0.2s; letter-spacing:.01em;">
 									<span style="display:inline-flex; align-items:center; gap:10px; font-size:1.18rem; font-weight:600;">
@@ -165,7 +169,8 @@ body {
 							</div>
 						</div>
 					</div>
-					<div style="display:flex; flex-direction:column; justify-content:center; align-items:stretch; gap:24px; padding:0 0 0 0; width:100%;">
+					<!-- Sidebar Column -->
+					<div class="col-lg-4" style="display:flex; flex-direction:column; justify-content:center; align-items:stretch; gap:24px; padding:0;">
 						<div class="modern-features-box" style="height:100%; width:100%; margin:0;">
 							<h3 class="modern-features-title">Öne Çıkan Özellikler</h3>
 							<ul class="modern-features-list">
@@ -346,8 +351,9 @@ body {
 	100% { left: calc(80vw - 18px); }
 }
 </style>
-<section id="ozel-section" style="width:100vw; min-height:180px; background:#21325E; display:flex; flex-direction:row; align-items:stretch; justify-content:center; border-radius:0 0 18px 18px; margin-top:0; margin-bottom:0; box-shadow:0 2px 12px rgba(33,50,94,0.07);">
-    <div style="flex:3; padding:32px 28px; display:flex; flex-direction:column; justify-content:center; color:#fff;">
+<section id="ozel-section" class="container-fluid" style="background:#21325E; border-radius:0 0 18px 18px; margin-top:0; margin-bottom:0; box-shadow:0 2px 12px rgba(33,50,94,0.07);">
+    <div class="row">
+        <div class="col-md-8" style="padding:32px 28px; display:flex; flex-direction:column; justify-content:center; color:#fff;">
 		<h2 style="color:#28b823; font-size:2rem; font-weight:700; margin-bottom:18px;">Araç Satış ve Kiralama Çözümleri</h2>
 		<p style="font-size:1.15rem; color:#3A7BD5; margin-bottom:18px; font-weight:500;">NetGaleri ve RentAgent ile araç satış ve kiralama süreçlerinizi tek panelden yönetin. Stok, müşteri, rezervasyon, sözleşme ve ödeme işlemlerini kolayca takip edin.</p>
 		<ul style="font-size:1.08rem; color:#fff; margin-bottom:18px; padding-left:18px;">
@@ -363,10 +369,12 @@ body {
 		</ul>
 		<p style="font-size:1.08rem; color:#fff; margin-bottom:0;">NetGaleri ve RentAgent ile tüm araç satış ve kiralama süreçlerinizi dijitalleştirin ve kolayca yönetin.</p>
 		<h2 style="color:#21325E; font-size:2rem; font-weight:700; margin-bottom:18px;">Araç Satış Çözümleri</h2>
+        </div>
+        <div class="col-md-4" style="padding:32px 18px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; min-height:420px;">
+	<img src="images/netgaleri.webp" alt="NetGaleri Görseli" class="img-fluid" style="border-radius:18px; box-shadow:0 4px 24px rgba(33,50,94,0.14); object-fit:cover; animation:floatYWide 3.8s ease-in-out infinite; will-change:transform;">
+        </div>
     </div>
-	<div style="flex:1; padding:32px 18px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; min-height:420px;">
-	<img src="images/netgaleri.webp" alt="NetGaleri Görseli" style="width:100%; max-width:700px; min-width:260px; min-height:220px; height:320px; border-radius:18px; box-shadow:0 4px 24px rgba(33,50,94,0.14); object-fit:cover; animation:floatYWide 3.8s ease-in-out infinite; will-change:transform;">
-    </div>
+</section>
 <style>
 @keyframes floatYWide {
   0% {
@@ -408,5 +416,28 @@ body {
 
 <script src="footer-component.js"></script>
 		</div>
+<!-- scripts.html -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jarallax.min.js"></script>
+<script src="js/jarallax-element.min.js"></script>
+<script src="js/lozad.min.js"></script>
+<script src="js/modernizr.min.js"></script>
+<script src="js/three.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/OBJLoader.js"></script>
+<script src="js/ParticleHead.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/typed.js"></script>
+<script src="js/main.js"></script>
 
 		</body>
